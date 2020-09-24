@@ -8,4 +8,4 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((e) => console.log("Connection error", e.message));
 
-module.exports = mongoose.connection
+module.exports = mongoose.connection;
