@@ -19,4 +19,4 @@ This is a mockup administration website for a hardware store. Users will be able
 - Upload images
 
 ## Team Name Logo
-![Logo](https://i.imgur.com/uStf8W6.jpg)
+<img src=https://i.imgur.com/uStf8W6.jpg width="250" height="350">
