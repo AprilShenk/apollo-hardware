@@ -10,3 +10,10 @@
 This is a mockup administration website for a hardware store. Users will be able to add, update, and remove products. The goal of this website it to allow a user-friendly experience for inventory management. Search by product is a feature that will be implemented. 
 
 ## MVP
+[Project tab](https://github.com/AprilShenk/apollo-hardware/projects)
+
+## Post MVP
+- Sort function
+- Reviews population
+- Changing images on detail page
+- Upload images
