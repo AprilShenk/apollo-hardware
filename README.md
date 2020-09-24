@@ -19,4 +19,4 @@ This is a mockup administration website for a hardware store. Users will be able
 - Upload images
 
 ## Team Name Logo
-![MAAP](https://files.slack.com/files-pri/T0351JZQ0-F01B8F52UTX/image_from_ios.jpg)
+![Logo](https://i.imgur.com/uStf8W6.jpg)
