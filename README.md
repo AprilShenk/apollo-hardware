@@ -17,3 +17,6 @@ This is a mockup administration website for a hardware store. Users will be able
 - Reviews population
 - Changing images on detail page
 - Upload images
+
+## Team Name Logo
+![MAAP](https://files.slack.com/files-pri/T0351JZQ0-F01B8F52UTX/image_from_ios.jpg)
