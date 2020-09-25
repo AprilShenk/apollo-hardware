@@ -12,3 +12,10 @@
   display: cover;
 }
 
+.link {
+  text-decoration: none;
+  color: #0D4373;
+}
+p {
+  color: black;
+}
