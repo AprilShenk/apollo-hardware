@@ -12,7 +12,7 @@ function Header(props) {
           <img className="attributes" id="header-logo" src="https://storage.googleapis.com/p3images/Logos/logo_black_header.png" alt="Apollo Hardware Logo"></img>
         </Link>
         <Link className="header-links" id="header-products" to="/products">SHOP</Link>
-        <Link className="header-links" id="header-add-products" to="/add-products">ADMIN</Link>
+        <Link className="header-links" id="header-add-products" to="/add-product">ADMIN</Link>
       </div>
       <div className="right-side">
         <Link className="header-search" to="/products/search-results">
