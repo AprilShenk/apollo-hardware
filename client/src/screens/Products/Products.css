@@ -1,0 +1,7 @@
+.products {
+  display: flex;
+  flex-flow: wrap;
+  max-width: 80%;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
