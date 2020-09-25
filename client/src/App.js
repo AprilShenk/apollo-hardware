@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Switch, Route} from 'react-router-dom'
 import './App.css';
+import Home from './screens/Home/Home'
+import Products from './screens/Products/Products'
+import ProductCreate from './screens/ProductCreate/ProductCreate'
+import ProductDetail from './screens/ProductDetail/ProductDetail'
+import ProductEdit from './screens/ProductEdit/ProductEdit'
+import SearchResults from './screens/SearchResults/SearchResults'
 
 function App() {
+  // TODO:
+  // allProducts state
+  // queriedProducts state
+  // onChange populate SearchResults
+  // pass results of queriedProducts as prop
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/products" component={Products} />
+        <Route exact path="/add-product" component={ProductCreate} />
+        <Route exact path="/products/:id/edit" component={ProductEdit} />
+        <Route exact path="/products/search-results" component={SearchResults} />
+        <Route exact path="/products/:id" component={ProductDetail} />
+      </Switch>
     </div>
   );
 }
