@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { createProduct } from "../../services/products";
 import { Redirect } from "react-router-dom";
-// import "./ProductCreate.css"
+import "./ProductCreate.css"
 
 const ProductCreate = () => {
   const [product, setProduct] = useState({
@@ -41,93 +41,82 @@ const ProductCreate = () => {
         <h3>Admin</h3>
         <form className="create-form" onSubmit={handleSubmit}>
           <div className="image-container">
-            <label>
-              Image # 1
-              <input
-                type="link"
-                placeholder="upload image"
-                value={product.imgURL1}
-                name="imgURL1"
-                required
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-              Image # 2
-              <input
-                type="link"
-                placeholder="upload image"
-                value={product.imgURL2}
-                name="imgURL2"
-                required
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-              Image # 3
-              <input
-                type="link"
-                placeholder="upload image"
-                value={product.imgURL3}
-                name="imgURL3"
-                required
-                onChange={handleChange}
-              />
-            </label>
+            <label for="imgURL1">Image # 1</label>
+            <input
+              type="link"
+              className="img"
+              placeholder="upload image"
+              value={product.imgURL1}
+              name="imgURL1"
+              required
+              onChange={handleChange}
+            />
+            <label for="imgURL2">Image # 2</label>
+            <input
+              type="link"
+              className="img"
+              placeholder="upload image"
+              value={product.imgURL2}
+              name="imgURL2"
+              required
+              onChange={handleChange}
+            />
+            <label for="imgURL3">Image # 3</label>
+            <input
+              type="link"
+              className="img"
+              placeholder="upload image"
+              value={product.imgURL3}
+              name="imgURL3"
+              required
+              onChange={handleChange}
+            />
           </div>
           <div className="product-info">
-            <label>
-              PRODUCT TITLE
-              <input
-                type="text"
-                className="title"
-                placeholder="write your product title here..."
-                value={product.name}
-                name="name"
-                required
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-              PRODUCT DESCRIPTION
-              <textarea
-                type="text"
-                rows="10"
-                cols="50"
-                className="description"
-                placeholder="write your product description here..."
-                value={product.description}
-                name="description"
-                required
-                onChange={handleChange}
-              />
-            </label>
+            <label for="name">PRODUCT TITLE</label>
+            <input
+              type="text"
+              className="name"
+              placeholder="write your product title here..."
+              value={product.name}
+              name="name"
+              required
+              onChange={handleChange}
+            />
+            <label for="description">PRODUCT DESCRIPTION</label>
+            <textarea
+              type="text"
+              rows="10"
+              cols="50"
+              className="description"
+              placeholder="write your product description here..."
+              value={product.description}
+              name="description"
+              required
+              onChange={handleChange}
+            />
           </div>
           <div className="product-numbers">
-            <label>
-              PRICE
-              <input
-                type="number"
-                className="price"
-                placeholder="write your product price here..."
-                value={product.price}
-                name="price"
-                required
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-              QTY IN STOCK
-              <input
-                type="number"
-                className="quantity"
-                placeholder="write your products quanity here..."
-                value={product.quantity}
-                name="quantity"
-                required
-                onChange={handleChange}
-              />
-            </label>
+            <label for="price">PRICE</label>
+            <input
+              type="number"
+              className="price"
+              placeholder="write your product price here..."
+              value={product.price}
+              name="price"
+              required
+              onChange={handleChange}
+            />
+            <label for="quantity">QTY IN STOCK</label>
+            <input
+              type="number"
+              className="quantity"
+              placeholder="write your products quanity here..."
+              value={product.quantity}
+              name="quantity"
+              required
+              onChange={handleChange}
+            />
           </div>
           <button type="submit" className="submit-button">
             PUBLISH
