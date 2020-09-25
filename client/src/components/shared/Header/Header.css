@@ -19,7 +19,7 @@ a{
 }
 
 #header-links{
-  align-content: center;
+  margin: 0 auto;
 }
 
 .search-input{
