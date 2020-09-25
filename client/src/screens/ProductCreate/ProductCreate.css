@@ -4,6 +4,7 @@ label {
 
 .create-container{
   display: flex;
+  
 
 }
 .create-form {
@@ -23,6 +24,11 @@ label {
 .img {
   width: 100px;
   margin: 10px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
 }
 
 .product-info {
