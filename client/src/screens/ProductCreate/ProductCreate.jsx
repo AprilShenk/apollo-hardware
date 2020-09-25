@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
+import Layout from "../../components/shared/Layout/Layout";
 
 const ProductCreate = () => {
   return (
-    <div>
-      Add page
-    </div>
+    <Layout>
+      <h1>Add Page</h1>
+    </Layout>
   );
 };
 

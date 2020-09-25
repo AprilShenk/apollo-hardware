@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
+import Layout from "../../components/shared/Layout/Layout";
 
 const Home = () => {
   return (
-    <div>
-      HomePage
-    </div>
+    <Layout>
+      <h1>HomePage</h1>
+    </Layout>
   );
 };
 

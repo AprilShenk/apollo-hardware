@@ -1,10 +1,11 @@
 import React from 'react';
+import Layout from "../../components/shared/Layout/Layout";
 
 const SearchResults = () => {
   return (
-    <div>
-      Search Results
-    </div>
+    <Layout>
+      <h1>Search Results</h1>
+    </Layout>
   );
 };
 
