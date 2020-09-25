@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/shared/Layout/Layout"
 import Product from "../../components/Product/Product"
+import '../Products/Products.css'
 import { getProducts } from "../../services/products";
 
 const Products = () => {
@@ -24,7 +25,6 @@ const Products = () => {
       description={product.description}
       price={product.price}
       rating={product.rating}
-      quantity={product.quantity}
       key={index}
     />
   ));
