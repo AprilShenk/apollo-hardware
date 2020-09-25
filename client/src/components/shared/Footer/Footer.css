@@ -1,0 +1,39 @@
+*{
+  border: 1px solid gold;
+}
+.bar {
+display: flex;
+justify-content: space-around;
+flex-direction: row;
+}
+
+.bar > div {
+  background-color: #0e4373;
+  height: 45px;
+  color: white;
+  padding-top: 20px;
+  padding-left: 80px;
+  /* padding-right: 40px; */
+}
+
+.data1{
+  flex: 1;
+  order: 1;
+  
+}
+
+.data2{
+  flex: 1;
+  order: 2;
+  
+}
+
+.data3{
+  flex: 1;
+  order: 3;
+  align-items: flex-end;
+}
+
+#logoF{
+  height: 50%;
+}
