@@ -1,0 +1,14 @@
+.product-div {
+  height: 360px;
+  width: 250px;
+  text-align: center;
+  border: 1px solid grey;
+  margin: 10px auto;
+}
+
+.product-image {
+  height: 240px;
+  width: 210px;
+  display: cover;
+}
+
