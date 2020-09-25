@@ -4,11 +4,9 @@ const Product = (props) => {
   return (
     <div>
       {props.name}
-      {props.imgURL1}
-      {props.description}
+      <img src={props.imgURL1} alt={props.name} />
       {props.price}
-      {props.rating}
-      {props.quantity}
+      {/* {props.rating} */}
     </div>
   );
 };
