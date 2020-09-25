@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 78px;
+  background-color: #F2B84B;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+a{
+  text-decoration: none;
+}
+
+#header-logo{
+  height: 55px;
+  width: 168px;
+}
+
+#header-links{
+  align-content: center;
+}
+
+.search-input{
+  width: 352px;
+  height: 30px;
+}
