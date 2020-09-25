@@ -20,6 +20,9 @@ const Products = () => {
       _id={product._id}
       name={product.name}
       imgURL1={product.imgURL1}
+      imgURL2={product.imgURL2}
+      imgURL3={product.imgURL3}
+      description={product.description}
       price={product.price}
       rating={product.rating}
       key={index}
