@@ -1,24 +1,26 @@
 label {
   display: block;
+  font: 26px;
 }
 
-.create-container{
+.create-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   height: 80%;
-
+  margin: 10px;
 }
 .create-form {
- 
+  display: flex;
+  flex: column wrap;
 }
 
 .image-container {
-  border: solid #0D4373;
+  border: solid #0d4373;
   border-radius: 8%;
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 200px;
+  width: 35vw;
+  height: 40vh;
   align-items: center;
   padding: 10px;
 }
@@ -32,24 +34,23 @@ label {
   display: flex;
   flex-direction: column;
   height: 300px;
-  
+  width: 40vw;
 }
 
 .product-info {
-  color: #0D4373;
- display: flex;
- flex-direction: column;
- 
-}
-
-.product-numbers {
-  color: #0D4373;
+  color: #0d4373;
   display: flex;
   flex-direction: column;
 }
 
+.product-numbers {
+  color: #0d4373;
+  display: flex;
+  flex-direction: row;
+}
+
 .submit-button {
-  border: solid #01192E;
+  border: solid #01192e;
   border-radius: 10%;
   background: none;
   width: 200px;
