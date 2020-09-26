@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Redirect, useParams } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
+import "../ProductEdit/ProductEdit.css";
 import { getProduct, updateProduct } from "../../services/products";
 
 const ProductEdit = (props) => {
@@ -42,13 +43,13 @@ const ProductEdit = (props) => {
   };
 
   if (isUpdated) {
-    return <Redirect to={`/products/${props.match.params.id}`} />
+    return <Redirect to={`/products/${props.match.params.id}`} />;
   }
 
   return (
     <Layout>
       <section className="edit-section">
-        <div className="image-container">
+        <div className="image-container-edit">
           <img
             className="edit-product-image"
             src={product.imgURL1}
@@ -76,31 +77,47 @@ const ProductEdit = (props) => {
             onChange={handleChange}
           />
           <input
-            className="input-price"
-            placeholder="Price"
-            value={product.price}
-            name="price"
-            required
-            onChange={handleChange}
-          />
-          <input
-            className="input-quantity"
-            placeholder="Quantity"
-            value={product.quantity}
-            name="quantity"
+            className="input-rating"
+            placeholder="Rating"
+            value={product.rating}
+            name="rating"
             required
             onChange={handleChange}
           />
           <textarea
             className="textarea-description"
             rows={10}
-            cols={78}
             placeholder="Description"
             value={product.description}
             name="description"
             required
             onChange={handleChange}
           />
+          <div className="price-qty-div">
+            <div className="price-div">
+              Price: $
+              <input
+                className="input-price"
+                placeholder="Price"
+                value={product.price}
+                name="price"
+                required
+                onChange={handleChange}
+              />
+            </div>
+            <div className="qty-div">
+              Qty:
+            <input
+              className="input-quantity"
+              placeholder="Quantity"
+              value={product.quantity}
+              name="quantity"
+              required
+              onChange={handleChange}
+            />
+            </div>
+            
+          </div>
           <button type="submit" className="save-button">
             Save
           </button>
