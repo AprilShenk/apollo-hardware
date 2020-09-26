@@ -2,27 +2,62 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* text-align: center; */
   align-items: center;
   height: 78px;
   background-color: #F2B84B;
   padding-left: 140px;
   padding-right: 140px;
+  
 }
 
 a{
   text-decoration: none;
+  text-align: center;
+ 
+  /* margin: 0 auto; */
+  /* align-items: center; */
 }
 
-#header-logo{
+#header-logo {
   height: 55px;
   width: 168px;
+  align-self: center;
+  /* margin: 0 auto; */
+  /* margin-top: 11.25px; */
+  
+  
 }
 
-#header-links{
-  margin: 0 auto;
+#header-title {
+  height: 11.25px;
+  display: flex;
 }
 
 .search-input{
   width: 352px;
   height: 30px;
+}
+
+.header-links {
+  font-size: 22px;
+  font-weight: 700;
+
+}
+
+#header-products {
+  padding-right: 16.16px;
+  margin: auto 0;
+}
+
+#header-add-products {
+  padding-left: 16.16px;
+}
+
+.left-side {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  
 }

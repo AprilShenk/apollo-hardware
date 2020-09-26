@@ -8,11 +8,13 @@ function Header(props) {
   return (
     <div className="header">
       <div className="left-side">
-        <Link className="header-links" id="header-title" to="/">
+        <Link id="header-title" to="/">
           <img className="attributes" id="header-logo" src="https://storage.googleapis.com/p3images/Logos/logo_black_header.png" alt="Apollo Hardware Logo"></img>
         </Link>
+        <div>
         <Link className="header-links" id="header-products" to="/products">SHOP</Link>
-        <Link className="header-links" id="header-add-products" to="/add-product">ADMIN</Link>
+          <Link className="header-links" id="header-add-products" to="/add-product">ADMIN</Link>
+          </div>
       </div>
       <div className="right-side">
         <Link className="header-search" to="/products/search-results">
