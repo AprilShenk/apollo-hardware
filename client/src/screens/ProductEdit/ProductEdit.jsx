@@ -87,6 +87,7 @@ const ProductEdit = (props) => {
           <textarea
             className="textarea-description"
             rows={10}
+            cols={78}
             placeholder="Description"
             value={product.description}
             name="description"
@@ -107,16 +108,15 @@ const ProductEdit = (props) => {
             </div>
             <div className="qty-div">
               Qty:
-            <input
-              className="input-quantity"
-              placeholder="Quantity"
-              value={product.quantity}
-              name="quantity"
-              required
-              onChange={handleChange}
-            />
+              <input
+                className="input-quantity"
+                placeholder="Quantity"
+                value={product.quantity}
+                name="quantity"
+                required
+                onChange={handleChange}
+              />
             </div>
-            
           </div>
           <button type="submit" className="save-button">
             Save

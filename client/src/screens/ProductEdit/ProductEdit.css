@@ -21,13 +21,13 @@
 .input-name {
   color: #0d4373;
   height: 46px;
-  width: 527px;
+  width: 100%;
   font-size: 34px;
   font-weight: bold;
 }
 .input-description {
   height: 69px;
-  width: 527px;
+  width: 100%;
 }
 .price-qty-div {
   display: flex;
@@ -38,6 +38,7 @@
 }
 .price-qty-div input {
   font-size: 28px;
+  width: 40%;
 }
 .save-button {
   width: 150px;
