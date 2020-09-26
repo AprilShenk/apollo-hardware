@@ -18,7 +18,7 @@ function Header(props) {
         <Link className="header-search" to="/products/search-results">
           <form className="search-form">
             <input className="search-input" name="Search" type='text' value={input} onChange={handleChange} placeholder='Search Product' />
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <button type="submit"><i className="fa fa-search"></i></button>
           </form>
         </Link>
       </div>
