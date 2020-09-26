@@ -41,7 +41,7 @@ const ProductCreate = () => {
         <h3>Admin</h3>
         <form className="create-form" onSubmit={handleSubmit}>
           <div className="image-container">
-            <label for="imgURL1">Image # 1</label>
+            <label htmlFor="imgURL1">Image # 1</label>
             <input
               type="link"
               className="img"
@@ -51,7 +51,7 @@ const ProductCreate = () => {
               required
               onChange={handleChange}
             />
-            <label for="imgURL2">Image # 2</label>
+            <label htmlFor="imgURL2">Image # 2</label>
             <input
               type="link"
               className="img"
@@ -61,7 +61,7 @@ const ProductCreate = () => {
               required
               onChange={handleChange}
             />
-            <label for="imgURL3">Image # 3</label>
+            <label htmlFor="imgURL3">Image # 3</label>
             <input
               type="link"
               className="img"
@@ -74,7 +74,7 @@ const ProductCreate = () => {
           </div>
           <div className="product">
             <div className="product-info">
-              <label for="name">PRODUCT TITLE</label>
+              <label htmlFor="name">PRODUCT TITLE</label>
               <input
                 type="text"
                 className="name"
@@ -84,7 +84,7 @@ const ProductCreate = () => {
                 required
                 onChange={handleChange}
               />
-              <label for="description">PRODUCT DESCRIPTION</label>
+              <label htmlFor="description">PRODUCT DESCRIPTION</label>
               <textarea
                 type="text"
                 rows="10"
@@ -98,7 +98,7 @@ const ProductCreate = () => {
               />
             </div>
             <div className="product-numbers">
-              <label for="price">PRICE</label>
+              <label htmlFor="price">PRICE</label>
               <input
                 type="number"
                 className="price"
@@ -108,7 +108,7 @@ const ProductCreate = () => {
                 required
                 onChange={handleChange}
               />
-              <label for="quantity">QTY IN STOCK</label>
+              <label htmlFor="quantity">QTY IN STOCK</label>
               <input
                 type="number"
                 className="quantity"

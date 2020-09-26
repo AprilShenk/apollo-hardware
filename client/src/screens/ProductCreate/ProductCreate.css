@@ -4,7 +4,8 @@ label {
 
 .create-container{
   display: flex;
-  
+  flex-flow: row wrap;
+  height: 80%;
 
 }
 .create-form {
@@ -16,7 +17,8 @@ label {
   border-radius: 8%;
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 400px;
+  height: 200px;
   align-items: center;
   padding: 10px;
 }
@@ -29,6 +31,8 @@ label {
 .product {
   display: flex;
   flex-direction: column;
+  height: 300px;
+  
 }
 
 .product-info {
