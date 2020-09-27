@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 import { NavLink } from 'react-router-dom';
 import "./Header.css";
 
 function Header(props) {
 
-  const { input, handleChange } = props
+
+
+  const { input } = props
   return (
     <div className="header">
       <div className="left-side">
@@ -19,8 +21,8 @@ function Header(props) {
       <div className="right-side">
         <NavLink className="header-search" to="/products/search-results">
           <form className="search-form">
-            <input className="search-input" name="Search" type='text' value={input} onChange={handleChange} placeholder='Search Product' />
-            <span><button className="search-button" id="search"><i class="fa fa-search"></i></button></span>
+            <input className="search-input" name="Search" type='text' value={input} placeholder='Search Product' />
+            <span><button className="search-button" id="search"><i className="fa fa-search"></i></button></span>
           </form>
         </NavLink>
       </div>
