@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { createProduct } from "../../services/products";
 import { Redirect } from "react-router-dom";
-import "./ProductCreate.css"
+import "./ProductCreate.css";
 
 const ProductCreate = () => {
   const [product, setProduct] = useState({
@@ -72,51 +72,53 @@ const ProductCreate = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="product-info">
-            <label htmlFor="name">PRODUCT TITLE</label>
-            <input
-              type="text"
-              className="name"
-              placeholder="write your product title here..."
-              value={product.name}
-              name="name"
-              required
-              onChange={handleChange}
-            />
-            <label htmlFor="description">PRODUCT DESCRIPTION</label>
-            <textarea
-              type="text"
-              rows="10"
-              cols="50"
-              className="description"
-              placeholder="write your product description here..."
-              value={product.description}
-              name="description"
-              required
-              onChange={handleChange}
-            />
-          </div>
-          <div className="product-numbers">
-            <label htmlFor="price">PRICE</label>
-            <input
-              type="number"
-              className="price"
-              placeholder="write your product price here..."
-              value={product.price}
-              name="price"
-              required
-              onChange={handleChange}
-            />
-            <label htmlFor="quantity">QTY IN STOCK</label>
-            <input
-              type="number"
-              className="quantity"
-              placeholder="write your products quanity here..."
-              value={product.quantity}
-              name="quantity"
-              required
-              onChange={handleChange}
-            />
+          <div className="product">
+            <div className="product-info">
+              <label htmlFor="name">PRODUCT TITLE</label>
+              <input
+                type="text"
+                className="name"
+                placeholder="write your product title here..."
+                value={product.name}
+                name="name"
+                required
+                onChange={handleChange}
+              />
+              <label htmlFor="description">PRODUCT DESCRIPTION</label>
+              <textarea
+                type="text"
+                rows="10"
+                cols="50"
+                className="description"
+                placeholder="write your product description here..."
+                value={product.description}
+                name="description"
+                required
+                onChange={handleChange}
+              />
+            </div>
+            <div className="product-numbers">
+              <label htmlFor="price">PRICE</label>
+              <input
+                type="number"
+                className="price"
+                placeholder="write your product price here..."
+                value={product.price}
+                name="price"
+                required
+                onChange={handleChange}
+              />
+              <label htmlFor="quantity">QTY IN STOCK</label>
+              <input
+                type="number"
+                className="quantity"
+                placeholder="write your products quanity here..."
+                value={product.quantity}
+                name="quantity"
+                required
+                onChange={handleChange}
+              />
+            </div>
           </div>
           <button type="submit" className="submit-button">
             PUBLISH
