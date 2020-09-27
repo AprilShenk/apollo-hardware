@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import "./Header.css";
 
 function Header(props) {
@@ -8,24 +8,29 @@ function Header(props) {
   return (
     <div className="header">
       <div className="left-side">
-        <Link className="header-links" id="header-title" to="/">
+        <NavLink id="header-title" to="/">
           <img className="attributes" id="header-logo" src="https://storage.googleapis.com/p3images/Logos/logo_black_header.png" alt="Apollo Hardware Logo"></img>
-        </Link>
-        <Link className="header-links" id="header-products" to="/products">SHOP</Link>
-        <Link className="header-links" id="header-add-products" to="/add-product">ADMIN</Link>
+        </NavLink>
+        <div>
+          <NavLink className="header-links" id="header-products" to="/products" activeStyle={{ color: '#148DD9' }}>SHOP</NavLink>
+          <NavLink className="header-links" id="header-add-products" to="/add-product" activeStyle={{ color: '#148DD9' }}>ADMIN</NavLink>
+        </div>
       </div>
       <div className="right-side">
-        <Link className="header-search" to="/products/search-results">
+        <NavLink className="header-search" to="/products/search-results">
           <form className="search-form">
             <input className="search-input" name="Search" type='text' value={input} onChange={handleChange} placeholder='Search Product' />
-            <button type="submit"><i className="fa fa-search"></i></button>
+            <span><button className="search-button" id="search"><i class="fa fa-search"></i></button></span>
           </form>
-        </Link>
+        </NavLink>
       </div>
     </div>
 
 
   )
 }
+
+// https://github.com/reactjs/react-router-tutorial/tree/master/lessons/05-active-links
+// <img className="search-icon" src="/search-icon.png" alt="Search"></img>
 
 export default Header;
