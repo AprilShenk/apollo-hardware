@@ -5,6 +5,7 @@ import { deleteProduct, getProduct } from "../../services/products";
 import DetailCarousel from "../../components/DetailCarousel/DetailCarousel";
 import "./ProductDetail.css";
 import BackArrow from "../../components/BackArrow/BackArrow";
+import { getStars } from '../../utils/rating'
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);
@@ -36,7 +37,7 @@ const ProductDetail = () => {
         />
         <aside className="product-info-aside">
           <h2>{product.name}</h2>
-          <h3>{product.rating}</h3>
+          <h3 className="rating">{getStars(product.rating)}</h3>
           <p>{product.description}</p>
           <p>Price: ${product.price}</p>
           <p>Qty: {product.quantity}</p>
