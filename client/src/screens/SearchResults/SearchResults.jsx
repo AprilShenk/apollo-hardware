@@ -4,7 +4,7 @@ import { getProducts } from "../../services/products";
 
 const SearchResults = () => {
 
-  const [allProducts, setAllProducts] = useState([]);
+  this.state= useState{[]}
 
   useEffect(() => {
     const fetchProducts = async () => {
