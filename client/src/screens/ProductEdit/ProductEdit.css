@@ -1,0 +1,49 @@
+.edit-section {
+  border: 3px solid purple;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+.edit-form {
+  display: flex;
+  flex-flow: column;
+  margin-left: 20px;
+  width: 60%;
+}
+
+.edit-product-image {
+  height: 338px;
+  width: 338px;
+  border: 3px solid #0d4373;
+  border-radius: 20px;
+}
+.input-name {
+  color: #0d4373;
+  height: 46px;
+  width: 100%;
+  font-size: 34px;
+  font-weight: bold;
+}
+.input-description {
+  height: 69px;
+  width: 100%;
+}
+.price-qty-div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28px;
+  width: 100%;
+  border: 1px solid brown;
+}
+.price-qty-div input {
+  font-size: 28px;
+  width: 40%;
+}
+.save-button {
+  width: 150px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: 3px solid #0d4373;
+  background-color: white;
+}
