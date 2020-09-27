@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 import Layout from "../../components/shared/Layout/Layout";
 import { deleteProduct, getProduct } from "../../services/products";
 import DetailCarousel from "../../components/DetailCarousel/DetailCarousel";
 import "./ProductDetail.css";
+import BackArrow from "../../components/BackArrow/BackArrow";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);
@@ -27,9 +26,7 @@ const ProductDetail = () => {
 
   return (
     <Layout>
-      <div className="back-arrow">
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </div>
+      <BackArrow />
       <div className="product-detail">
         <DetailCarousel
           imgURL1={product.imgURL1}
