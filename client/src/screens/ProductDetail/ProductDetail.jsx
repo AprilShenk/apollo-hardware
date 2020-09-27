@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Layout from "../../components/shared/Layout/Layout";
 import { deleteProduct, getProduct } from '../../services/products';
+import DetailCarousel from '../../components/DetailCarousel/DetailCarousel';
 
 const ProductDetail = () => {
 
@@ -26,7 +27,13 @@ const ProductDetail = () => {
     <Layout>
       <div className="product-detail">
         {/* TODO: replace img with DetailCarousel */}
-        <img src={product.imgURL1} alt={product.name}/>
+        {/* <img src={product.imgURL1} alt={product.name}/> */}
+        <DetailCarousel
+          imgURL1={product.imgURL1}
+          imgURL2={product.imgURL2}
+          imgURL3={product.imgURL3}
+          name={product.name}
+        />
         <h2>{product.name}</h2>
         <h3>{product.rating}</h3>
         <p>{product.description}</p>
