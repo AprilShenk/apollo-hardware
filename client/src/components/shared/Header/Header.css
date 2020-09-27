@@ -1,28 +1,97 @@
+@import url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css');
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* text-align: center; */
   align-items: center;
   height: 78px;
   background-color: #F2B84B;
   padding-left: 140px;
   padding-right: 140px;
+  
 }
 
 a{
   text-decoration: none;
+  text-align: center;
+ 
+  /* margin: 0 auto; */
+  /* align-items: center; */
 }
 
-#header-logo{
+#header-logo {
   height: 55px;
   width: 168px;
+  align-self: center;
+  /* margin: 0 auto; */
+  /* margin-top: 11.25px; */
+  
+  
 }
 
-#header-links{
-  margin: 0 auto;
+#header-title {
+  height: 11.25px;
+  display: flex;
 }
 
 .search-input{
-  width: 352px;
+  width: 300px;
   height: 30px;
+  border: 1px solid #0D4373;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 15px;
+  font-size: 12px;
+}
+
+::placeholder {
+  color: #0D4373;
+}
+
+
+.header-links {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0D4373;
+  letter-spacing: 1.5px;
+}
+
+#header-products {
+  padding-right: 16.16px;
+  margin: auto 0;
+  padding-left: 20px;
+}
+
+#header-add-products {
+  padding-left: 16.16px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button{
+  height: 34px;
+  width: 37px;
+  border-top: 1px solid #0D4373;
+  border-right: 1px solid #0D4373;
+  border-bottom: 1px solid #0D4373;
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+}
+
+.fa {
+  color:  #0D4373;
 }

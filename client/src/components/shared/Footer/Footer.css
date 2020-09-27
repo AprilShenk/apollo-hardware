@@ -1,6 +1,6 @@
-*{
+/* *{
   border: 1px solid gold;
-}
+} */
 .bar {
 display: flex;
 justify-content: space-around;
