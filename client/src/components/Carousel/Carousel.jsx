@@ -6,11 +6,11 @@ import "./Carousel.css";
 const Carousel = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [displayCurr, setDisplayCurr] = useState(true);
-  const [myIndex, setMyIndex] = useState(0);
+  let [myIndex, setMyIndex] = useState(0);
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const products = await getProducts();
+      let products = await getProducts();
       setAllProducts(products);
     };
     fetchProducts();
@@ -34,7 +34,7 @@ const Carousel = () => {
       myIndex = 1;
     }
     // allProducts[myIndex - 1].style.display = "block";
-    setTimeout(carousel, 2000); // Change image every 2 seconds
+    setTimeout(carousel, 4000); // Change image every 4 seconds
   };
 
   const carouselJSX = allProducts.map((product, index) => {
