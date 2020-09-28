@@ -12,10 +12,19 @@
 }
 
 .edit-product-image {
-  height: 338px;
-  width: 338px;
+  height: 100px;
+  width: 100px;
   border: 3px solid #0d4373;
   border-radius: 20px;
+  margin: 5px;
+}
+.edit-input-image-link {
+  width: 100%;
+}
+.image-and-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 .input-name {
   color: #0d4373;
@@ -33,7 +42,6 @@
   justify-content: space-between;
   font-size: 28px;
   width: 100%;
-  border: 1px solid brown;
 }
 .price-qty-div input {
   font-size: 28px;

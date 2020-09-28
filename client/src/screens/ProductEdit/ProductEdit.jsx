@@ -52,21 +52,58 @@ const ProductEdit = (props) => {
       <BackArrow />
       <section className="edit-section">
         <div className="image-container-edit">
-          <img
+          <div className="image-and-input">
+            <img
+              className="edit-product-image"
+              src={product.imgURL1}
+              alt={product.name}
+            />
+            <form onSubmit={handleSubmit}>
+              <input
+                className="edit-input-image-link"
+                placeholder="Image Link"
+                value={product.imgURL1}
+                name="imgURL1"
+                required
+                onChange={handleChange}
+              />
+            </form>
+          </div>
+          <div className="image-and-input">
+            <img
+              className="edit-product-image"
+              src={product.imgURL2}
+              alt={product.name}
+            />
+            <form onSubmit={handleSubmit}>
+              <input
+                className="edit-input-image-link"
+                placeholder="Image Link"
+                value={product.imgURL2}
+                name="imgURL2"
+                required
+                onChange={handleChange}
+              />
+            </form>
+          </div>
+          <div className="image-and-input">
+            <img
             className="edit-product-image"
-            src={product.imgURL1}
+            src={product.imgURL3}
             alt={product.name}
           />
           <form onSubmit={handleSubmit}>
             <input
               className="edit-input-image-link"
               placeholder="Image Link"
-              value={product.imgURL1}
-              name="imgURL1"
+              value={product.imgURL3}
+              name="imgURL3"
               required
               onChange={handleChange}
             />
           </form>
+          </div>
+          
         </div>
         <form className="edit-form" onSubmit={handleSubmit}>
           <input
@@ -76,14 +113,6 @@ const ProductEdit = (props) => {
             name="name"
             required
             autoFocus
-            onChange={handleChange}
-          />
-          <input
-            className="input-rating"
-            placeholder="Rating"
-            value={product.rating}
-            name="rating"
-            required
             onChange={handleChange}
           />
           <textarea
