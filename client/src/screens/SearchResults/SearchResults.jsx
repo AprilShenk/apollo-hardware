@@ -4,16 +4,16 @@ import { getProducts } from "../../services/products";
 
 const SearchResults = () => {
 
-  this.state= useState{[]}
+  // this.state= useState{[]}
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const products = await getProducts();
-      setAllProducts(products);
-    };
-    fetchProducts();
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     const products = await getProducts();
+  //     setAllProducts(products);
+  //   };
+  //   fetchProducts();
     
-  }, []);
+  // }, []);
 
   
 
