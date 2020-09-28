@@ -1,11 +1,14 @@
 import React from "react";
 import Layout from "../../components/shared/Layout/Layout";
-import WelcomeContainer from "../../components/WelcomeContainer/WelcomeContainer"
+import Carousel from '../../components/Carousel/Carousel'
+import WelcomeContainer from '../../components/WelcomeContainer/WelcomeContainer'
 
 const Home = () => {
   return (
     <Layout>
-      <WelcomeContainer />
+      <h1>HomePage</h1>
+      <Carousel />
+      <WelcomeContainer/>
     </Layout>
   );
 };

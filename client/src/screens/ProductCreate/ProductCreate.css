@@ -9,10 +9,6 @@ label {
   height: 80%;
   margin: 10px;
 }
-.create-form {
-  display: flex;
-  flex: column wrap;
-}
 
 .image-container {
   border: solid #0d4373;
