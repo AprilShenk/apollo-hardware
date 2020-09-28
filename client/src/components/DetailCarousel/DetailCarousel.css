@@ -1,0 +1,25 @@
+.detail-carousel {
+  display: flex;
+  flex-direction: row;
+}
+.detail-carousel img {
+  border: 3px solid #0d4373;
+  border-radius: 20px;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.image-thumbnail {
+  height: 85px;
+  width: 85px;
+}
+
+.show-image {
+  height: 338px;
+  width: 338px;
+  margin: auto 15px;
+}

@@ -3,6 +3,7 @@ import { Redirect, useParams } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
 import "../ProductEdit/ProductEdit.css";
 import { getProduct, updateProduct } from "../../services/products";
+import BackArrow from "../../components/BackArrow/BackArrow";
 
 const ProductEdit = (props) => {
   const [product, setProduct] = useState({
@@ -48,6 +49,7 @@ const ProductEdit = (props) => {
 
   return (
     <Layout>
+      <BackArrow />
       <section className="edit-section">
         <div className="image-container-edit">
           <img

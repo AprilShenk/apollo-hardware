@@ -1,6 +1,38 @@
-/* *{
-  border: gold solid 1px;
-} */
+.product-detail {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.product-info-aside {
+  width: 60%;
+  margin-left: 40px;
+}
+
+.edit-button {
+  width: 337px;
+  height: 62px;
+  font-size: x-large;
+  font-weight: bolder;
+  border-radius: 20px;
+  color: black;
+  border: 3px solid #0d4373;
+  margin: 0 15px 15px 0;
+}
+:visited {
+  color: black;
+}
+
+.delete-button {
+  width: 150px;
+  height: 29px;
+  border-radius: 20px;
+  border: 3px solid #0d4373;
+}
+.rating {
+  color: #F2B84B;
+}
 
 .product-detail{
   display: grid;
