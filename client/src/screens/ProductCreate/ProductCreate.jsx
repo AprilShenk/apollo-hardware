@@ -10,7 +10,7 @@ const ProductCreate = () => {
     imgURL1: "",
     imgURL2: "",
     imgURL3: "",
-    descriptioin: "",
+    description: "",
     price: 0,
     rating: 0,
     quantity: 0,
@@ -99,26 +99,30 @@ const ProductCreate = () => {
                 />
               </div>
               <div className="product-numbers">
-                <label htmlFor="price">PRICE</label>
-                <input
-                  type="number"
-                  className="price"
-                  placeholder="write your product price here..."
-                  value={product.price}
-                  name="price"
-                  required
-                  onChange={handleChange}
-                />
-                <label htmlFor="quantity">QTY IN STOCK</label>
-                <input
-                  type="number"
-                  className="quantity"
-                  placeholder="write your products quanity here..."
-                  value={product.quantity}
-                  name="quantity"
-                  required
-                  onChange={handleChange}
-                />
+                <div className="price-qty">
+                  <label htmlFor="price">PRICE</label>
+                  <input
+                    type="number"
+                    className="price"
+                    placeholder="write your product price here..."
+                    value={product.price}
+                    name="price"
+                    required
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="price-qty">
+                  <label htmlFor="quantity">QTY IN STOCK</label>
+                  <input
+                    type="number"
+                    className="quantity"
+                    placeholder="write your products quanity here..."
+                    value={product.quantity}
+                    name="quantity"
+                    required
+                    onChange={handleChange}
+                  />
+                </div>
               </div>
               <button type="submit" className="submit-button">
                 PUBLISH

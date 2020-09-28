@@ -1,9 +1,3 @@
-label {
-  display: block;
-  font: 26px;
-  margin-top: 10px;
-}
-
 .admin {
   margin-left: 270px;
   font-size: 50px;
@@ -53,12 +47,17 @@ label {
   flex-direction: column;
   margin-top: 10px;
 }
-
+.price-qty {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 0 0;
+}
 .product-numbers {
-  margin-top: 20px;
+  margin: 20 10 0 0px;
   color: #0d4373;
   display: flex;
-  flex-direction: row;
+
+  /* flex-direction: row; */
 }
 
 .submit-button {
