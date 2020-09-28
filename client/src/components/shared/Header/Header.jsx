@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "./Header.css";
 
 function Header(props) {
@@ -22,7 +24,7 @@ function Header(props) {
         <NavLink className="header-search" to="/products/search-results">
           <form className="search-form">
             <input className="search-input" name="Search" type='text' value={input} placeholder='Search Product' />
-            <span><button className="search-button" id="search"><i className="fa fa-search"></i></button></span>
+            <span><button className="search-button" id="search"><FontAwesomeIcon className="fa fa-search"  icon={faSearch}/></button></span>
           </form>
         </NavLink>
       </div>
@@ -34,5 +36,6 @@ function Header(props) {
 
 // https://github.com/reactjs/react-router-tutorial/tree/master/lessons/05-active-links
 // <img className="search-icon" src="/search-icon.png" alt="Search"></img>
+//<span><button className="search-button" id="search"><i className="fa fa-search"></i></button></span> 
 
 export default Header;
