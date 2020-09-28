@@ -34,17 +34,14 @@ flex-direction: row;
 }
 
 #logoF{
-  height: 40%;
+  height: 60%;
 }
 
-p {
-  font-size: x-small;
+
+ #copyTxt {
+  color: white;
+  font-size: 9px; 
   display: block;
   padding:0 5px  ;
-  margin-top: 1px;
-  }  
- 
- #copyTxt {
-  color: white; 
+  margin-top: -2px;
 }
-/**/

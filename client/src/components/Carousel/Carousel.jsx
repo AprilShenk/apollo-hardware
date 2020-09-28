@@ -1,65 +1,56 @@
-// import React, { useState, useEffect } from "react";
-// import { getProducts } from "../../services/products";
-// import CarouselCard from "../CarouselCard/CarouselCard";
-// import "./Carousel.css";
+import React, { useEffect, useState } from "react";
+import { getProducts } from "../../services/products";
+import CarouselCard from "../../components/CarouselCard/CarouselCard";
+import "./Carousel.css";
 
-// const Carousel = () => {
-//   const [allProducts, setAllProducts] = useState([]);
-//   const [displayCurr, setDisplayCurr] = useState(true);
-//   let [myIndex, setMyIndex] = useState(0);
+const Carousel = () => {
+  const [allProducts, setAllProducts] = useState([]);
+  const [display, setDisplay] = useState(false);
 
-//   useEffect(() => {
-//     const fetchProducts = async () => {
-//       let products = await getProducts();
-//       setAllProducts(products);
-//     };
-//     fetchProducts();
-//   }, []);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const products = await getProducts();
+      setAllProducts(products);
+    };
+    fetchProducts();
+  }, []);
 
-//   /*Thoughts on what to do - possible fun pair coding exercise -
-//   turn allProducts into array of arrays with max of 5 indexes each, 
-//   (possibly use recursive call used in shared elements algo to make array of arrays)
-//   use set interval to change index of array of arrays to display next index causing inner map to rerun and display items
-//   set boundries to once interval kicks at end of outer array it goes back to first index
-//    */
-//   // const displayArr = ;
+  useEffect(() => {
+    const timeout = setTimeout(() => setDisplay(!display), 7000);
+    return () => {
+      clearTimeout(timeout)
+    }
+  });
 
-//   const carousel = () => {
-//     for (let i = 0; i < allProducts.length / 5; i++) {
-//       setDisplayCurr(false);
-//       // x[i].style.display = "none";
-//     }
-//     setMyIndex(myIndex++);
-//     if (myIndex > allProducts.length) {
-//       myIndex = 1;
-//     }
-//     // allProducts[myIndex - 1].style.display = "block";
-//     setTimeout(carousel, 4000); // Change image every 4 seconds
-//   };
+  const productSlide1 = [];
+  const productSlide2 = [];
 
-//   const carouselJSX = allProducts.map((product, index) => {
-//     if (index < 5) {
-//       return (
-//         <div>
-//           <CarouselCard
-//             _id={product._id}
-//             name={product.name}
-//             imgURL1={product.imgURL1}
-//             key={index}
-//           />
-//         </div>
-//       );
-//     }
-//   });
+  allProducts.forEach((product, index) => {
+    index < 5 ? productSlide1.push(product) : productSlide2.push(product);
+  });
 
-//   return (
-//     <div
-//       className="mySlide"
-//       style={displayCurr ? { display: `flex` } : { display: "none" }}
-//     >
-//       {carouselJSX}
-//     </div>
-//   );
-// };
+  const displayPics1 = productSlide1.map((product) => (
+    <CarouselCard
+      name={product.name}
+      imgURL1={product.imgURL1}
+      key={product._id}
+      id={product._id}
+    />
+  ));
+  const displayPics2 = productSlide2.map((product) => (
+    <CarouselCard
+      name={product.name}
+      imgURL1={product.imgURL1}
+      key={product._id}
+      id={product._id}
+    />
+  ));
 
-// export default Carousel;
+  if (!display) {
+    return <div className="carousel-container">{displayPics2}</div>;
+  } else {
+    return <div className="carousel-container">{displayPics1}</div>;
+  }
+};
+
+export default Carousel;
