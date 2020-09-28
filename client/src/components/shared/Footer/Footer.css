@@ -12,7 +12,8 @@ flex-direction: row;
   height: 45px;
   color: white;
   padding-top: 20px;
-  padding-left: 80px;
+  text-align: center;
+  
   /* padding-right: 40px; */
 }
 
@@ -23,7 +24,7 @@ flex-direction: row;
 }
 
 .data2{
-  flex: 1;
+  flex: 2;
   order: 2;
   
 }
@@ -31,9 +32,17 @@ flex-direction: row;
 .data3{
   flex: 1;
   order: 3;
-  align-items: flex-end;
+ 
 }
 
 #logoF{
-  height: 50%;
+  height: 40%;
+}
+
+p {
+  font-size: x-small;
+  display: block;
+  padding:0 5px  ;
+  margin-top: 1px;
+  
 }
