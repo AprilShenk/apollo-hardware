@@ -1,6 +1,4 @@
-/* *{
-  border: 1px solid gold;
-} */
+
 .bar {
 display: flex;
 justify-content: space-around;
@@ -14,7 +12,7 @@ flex-direction: row;
   padding-top: 20px;
   text-align: center;
   
-  /* padding-right: 40px; */
+ 
 }
 
 .data1{
@@ -44,5 +42,8 @@ p {
   display: block;
   padding:0 5px  ;
   margin-top: 1px;
-  
+  }
+ 
+ #copyTxt {
+  color: white; 
 }
