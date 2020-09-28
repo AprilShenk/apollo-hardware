@@ -10,22 +10,22 @@ import SearchResults from './screens/SearchResults/SearchResults'
 
 function App() {
   // TODO:
-  const [allProducts, setAllProducts] = useState([])
-  const [queriedProducts, setQueriedProducts] = useState([])
+  // const [allProducts, setAllProducts] = useState([])
+  // const [queriedProducts, setQueriedProducts] = useState([])
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const products = await getProducts()
-      setAllProducts(products)
-      setQueriedProducts(products)
-    }
-    fetchProducts()
-  }, [])
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     const products = await getProducts()
+  //     setAllProducts(products)
+  //     setQueriedProducts(products)
+  //   }
+  //   fetchProducts()
+  // }, [])
 
-  const handleSearch = event => {
-    const newQueriedProducts = allProducts.filter(product => product.name.toLowerCase().includes(event.target.value.toLowerCase()))
-    setQueriedProducts(newQueriedProducts, () => handleSort(sortType))
-  }
+  // const handleSearch = event => {
+  //   const newQueriedProducts = allProducts.filter(product => product.name.toLowerCase().includes(event.target.value.toLowerCase()))
+  //   setQueriedProducts(newQueriedProducts, () => handleSort(sortType))
+  // }
 
   // allProducts state
   // queriedProducts state
