@@ -5,3 +5,9 @@
   justify-content: space-evenly;
   margin: 0 auto;
 }
+h1 {
+  margin-left: 140px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  color: #0d4373;
+}
