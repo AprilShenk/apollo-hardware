@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "./Header.css";
 
 function Header(props) {
@@ -21,7 +23,7 @@ function Header(props) {
       <div className="right-side"> 
           <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
             <input className="search-input" name="Search" type='text' value={props.value} placeholder='Search Product' onChange={(e) => props.onChange(e)} />
-            <span><button className="search-button" id="search"><i className="fa fa-search"></i></button></span>
+            <span><button className="search-button" id="search"> <FontAwesomeIcon className="fa" icon={faSearch} /></button></span>
           </form>
       </div>
     </div>
