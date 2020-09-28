@@ -37,8 +37,8 @@ const ProductCreate = () => {
 
   return (
     <Layout>
+      <h3>Admin</h3>
       <div className="create-container">
-        <h3>Admin</h3>
         <form className="create-form" onSubmit={handleSubmit}>
           <div className="image-container">
             <label htmlFor="imgURL1">Image # 1</label>
