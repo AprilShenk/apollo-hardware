@@ -1,20 +1,4 @@
-.item-div {
-  border: 1px solid grey;
-  box-shadow: 10px 0px 10px -3px #0a5d91e5, 10px 4px 10px -3px #0a5d91e5,
-    -10px 0px 10px -3px #0a5d91e5;
-  border-radius: 25px;
-}
-
 .item-image {
-  border-radius: 25px;
-  max-width: 150px;
-  max-height: 150px;
-  display: cover;
-}
-
-.link {
   height: 150px;
   width: 150px;
-  text-decoration: none;
-  margin: 20px;
 }
