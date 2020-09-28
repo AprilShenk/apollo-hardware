@@ -4,7 +4,7 @@ import '../Product/Product.css'
 
 const Product = (props) => {
   return (
-    <Link to={`/products/${props._id}`} className='link'>
+    <Link to={`/products/${props._id}`} className='link-product-page'>
       <div className="product-div">
       <img className="product-image" src={props.imgURL1} alt={props.name} />
       <h3>{props.name}</h3>
