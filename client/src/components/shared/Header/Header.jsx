@@ -6,7 +6,7 @@ function Header(props) {
 
 
 
-  const { input } = props
+
   return (
     <div className="header">
       <div className="left-side">
@@ -18,13 +18,11 @@ function Header(props) {
           <NavLink className="header-links" id="header-add-products" to="/add-product" activeStyle={{ color: '#148DD9' }}>ADMIN</NavLink>
         </div>
       </div>
-      <div className="right-side">
-        <NavLink className="header-search" to="/products/search-results">
-          <form className="search-form">
-            <input className="search-input" name="Search" type='text' value={input} placeholder='Search Product' />
+      <div className="right-side"> 
+          <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
+            <input className="search-input" name="Search" type='text' value={props.value} placeholder='Search Product' onChange={(e) => props.onChange(e)} />
             <span><button className="search-button" id="search"><i className="fa fa-search"></i></button></span>
           </form>
-        </NavLink>
       </div>
     </div>
 
