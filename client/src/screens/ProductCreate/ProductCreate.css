@@ -98,7 +98,4 @@ input[type="number"] {
   border-color: gold;
 }
 
-.submit-button::after {
-  outline: none;
-  border-color: gold;
-}
+
