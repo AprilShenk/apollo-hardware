@@ -11,43 +11,6 @@ function Header(props) {
   const [queriedProducts, setQueriedProducts] = useState([])
   const history = useHistory()
 
-  
-
-  // const handleChange = event => {
-    // function filterTest (allProducts) {
-    //   if (event.target.value.toLowerCase() == filter to create a function-test that looks through the all products array and returns watch matches  ) {
-        
-    //   }
-    // }
-    // console.log(allProducts)
-    // const newQueriedProducts = allProducts.filter((filterResult) => {
-    //   if (allProducts.product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
-    //     return (
-    //       filterResult
-    //     )
-    //   }
-    // })
-
-//     const queriedProducts = allProducts.filter((filterResult) => {
-//       if (allProducts.product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
-//         return (
-//           filterResult
-//         )
-//       }
-//     })
-
-//     console.log(queriedProducts)
-// }
-    
-    // const queriedProducts = allProducts.filter(product => product.name.toLowerCase() ===event.target.value.toLowerCase(){return true})
-    // console.log(event.target.value.toLowerCase())
-
-  //   console.log(allProducts)
-  //   setQueriedProducts(queriedProducts)
-  // }
-
-
-
   return (
     <div className="header">
       <div className="left-side">

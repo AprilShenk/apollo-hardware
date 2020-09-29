@@ -12,7 +12,15 @@ const SearchResults = (props) => {
   return (
     <Layout handleChange={props.handleChange}>
       <h1>Search Results</h1>
-      
+      {props.queriedProducts.map((product, index) => {
+        return (
+          <div className="result-card">
+            {product.name}
+
+          </div>
+        )
+        
+      })}
     </Layout>
   );
 };

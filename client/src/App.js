@@ -20,7 +20,7 @@ function App() {
     const fetchProducts = async () => {
       const products = await getProducts()
       setAllProducts(products)
-      console.log(products)
+      setQuery("")
     }
     fetchProducts()
   }, [])
@@ -55,7 +55,7 @@ function App() {
         <Route exact path="/add-product" component={ProductCreate} />
         <Route exact path="/products/:id/edit" component={ProductEdit} />
         <Route exact path="/products/search-results">
-          <SearchResults handleChange={handleChange} />
+          <SearchResults handleChange={handleChange} queriedProducts={queriedProducts} />
         </Route>
         <Route exact path="/products/:id" component={ProductDetail} />
       </Switch>
