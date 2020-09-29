@@ -21,11 +21,37 @@ function Header(props) {
   }, [])
 
   const handleSearch = event => {
-    const queriedProducts = allProducts.filter(product => product.name.toLowerCase().includes(event.target.value.toLowerCase()))
-    console.log(event.target.value.toLowerCase())
+    // function filterTest (allProducts) {
+    //   if (event.target.value.toLowerCase() == filter to create a function-test that looks through the all products array and returns watch matches  ) {
+        
+    //   }
+    // }
     console.log(allProducts)
-    setQueriedProducts(queriedProducts)
-  }
+    const newQueriedProducts = allProducts.filter((filterResult) => {
+      if (allProducts.product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
+        return (
+          filterResult
+        )
+      }
+    })
+
+    const queriedProducts = allProducts.filter((filterResult) => {
+      if (allProducts.product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
+        return (
+          filterResult
+        )
+      }
+    })
+
+    console.log(queriedProducts)
+}
+    
+    // const queriedProducts = allProducts.filter(product => product.name.toLowerCase() ===event.target.value.toLowerCase(){return true})
+    // console.log(event.target.value.toLowerCase())
+
+  //   console.log(allProducts)
+  //   setQueriedProducts(queriedProducts)
+  // }
 
 
 
@@ -33,16 +59,29 @@ function Header(props) {
     <div className="header">
       <div className="left-side">
         <NavLink id="header-title" to="/">
-          <img className="attributes" id="header-logo" src="https://storage.googleapis.com/p3images/Logos/logo_black_header.png" alt="Apollo Hardware Logo"></img>
+          <img className="attributes"
+            id="header-logo"
+            src="https://storage.googleapis.com/p3images/Logos/logo_black_header.png"
+            alt="Apollo Hardware Logo"></img>
         </NavLink>
         <div>
-          <NavLink className="header-links" id="header-products" to="/products" activeStyle={{ color: '#148DD9' }}>SHOP</NavLink>
-          <NavLink className="header-links" id="header-add-products" to="/add-product" activeStyle={{ color: '#148DD9' }}>ADMIN</NavLink>
+          <NavLink className="header-links"
+            id="header-products"
+            to="/products"
+            activeStyle={{ color: '#148DD9' }}>SHOP</NavLink>
+          <NavLink className="header-links"
+            id="header-add-products"
+            to="/add-product"
+            activeStyle={{ color: '#148DD9' }}>ADMIN</NavLink>
         </div>
       </div>
       <div className="right-side"> 
           <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
-            <input className="search-input" name="Search" type='text' value={props.value} placeholder='Search Product' onChange={handleSearch}  />
+          <input className="search-input"
+            name="Search" type='text'
+            value={props.value}
+            placeholder='Search Product'
+            onChange={handleSearch} />
             <span><button className="search-button" id="search"> <FontAwesomeIcon className="fa" icon={faSearch} /></button></span>
           </form>
       </div>
