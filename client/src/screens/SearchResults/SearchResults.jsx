@@ -6,23 +6,25 @@ import Layout from "../../components/shared/Layout/Layout";
 const SearchResults = (props) => {
 
 
-
-  
-
   return (
-    <Layout>
+    <Layout handleChange={props.handleChange}>
       <h1>Search Results</h1>
-      <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
-            <input
-                className="search-input"
-                value={props.value}
-                onChange={(e) => props.onChange(e)}
-                name="Search"
-                placeholder="Search"
-                type="text"
-                autoFocus
-            />
-        </form>
+      {props.queriedProducts.map((product, index) => {
+        return (
+          <div className="result-card">
+            {product._id}
+            {product.name}
+            {product.imgURL1}
+            {product.imgURL2}
+            {product.imgURL3}
+            {product.description}
+            {product.price}
+            {product.rating}
+            {index}
+          </div>
+        )
+        
+      })}
     </Layout>
   );
 };
