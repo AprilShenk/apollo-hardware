@@ -90,12 +90,15 @@ input[type="number"] {
 
 .submit-button:active {
   outline: none;
-  border-color: gold;
+  border-color: #f2b84b;
 }
 
 .submit-button:focus {
   outline: none;
-  border-color: gold;
+  transition: ease-out;
+  border-color: #f2b84b;
 }
 
-
+.submit-button:target {
+  border-color: gold;
+}

@@ -9,6 +9,8 @@ const ProductCreate = () => {
 
   const changeText = (text) => setButtonText(text);
 
+ 
+
   const [product, setProduct] = useState({
     name: "",
     imgURL1: "",
@@ -134,7 +136,7 @@ const ProductCreate = () => {
               </div>
               <button
                 type="submit"
-                className="submit-button"
+                className={`submit-button`}
                 onClick={() => changeText("PUBLISHED")}
               >
                 {buttonText}
