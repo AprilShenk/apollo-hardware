@@ -12,7 +12,7 @@ import { getProducts } from "./services/products";
 
 function App() {
   // TODO:
-  const setQuery = useState("")
+  
   const [allProducts, setAllProducts] = useState([])
   const [queriedProducts, setQueriedProducts] = useState([])
 
@@ -32,7 +32,7 @@ function App() {
   }, [location])
 
   const handleChange = event => {
-  
+
     if (event.target.value.length > 2) {
       const filteredItems = allProducts && allProducts.filter((product) => { 
         if (product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
