@@ -6,7 +6,6 @@ import WelcomeContainer from '../../components/WelcomeContainer/WelcomeContainer
 const Home = (props) => {
   return (
     <Layout handleChange={props.handleChange}>
-      <h1>HomePage</h1>
       <Carousel />
       <WelcomeContainer/>
     </Layout>
