@@ -30,7 +30,7 @@ const Products = () => {
   ));
   return (
     <Layout>
-      <h1>All Products</h1>
+      <h1 id="products-title">All Products</h1>
       <div className="products">
         {productsJSX}
       </div>

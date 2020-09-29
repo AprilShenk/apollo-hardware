@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {Switch, Route} from 'react-router-dom'
 import './App.css';
 import Home from './screens/Home/Home'
@@ -7,20 +7,12 @@ import ProductCreate from './screens/ProductCreate/ProductCreate'
 import ProductDetail from './screens/ProductDetail/ProductDetail'
 import ProductEdit from './screens/ProductEdit/ProductEdit'
 import SearchResults from './screens/SearchResults/SearchResults'
+// import { getProducts } from "./services/products";
+// import { response } from "express";
 
 function App() {
   // TODO:
-  // const [allProducts, setAllProducts] = useState([])
-  // const [queriedProducts, setQueriedProducts] = useState([])
-
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     const products = await getProducts()
-  //     setAllProducts(products)
-  //     setQueriedProducts(products)
-  //   }
-  //   fetchProducts()
-  // }, [])
+  
 
   // const handleSearch = event => {
   //   const newQueriedProducts = allProducts.filter(product => product.name.toLowerCase().includes(event.target.value.toLowerCase()))

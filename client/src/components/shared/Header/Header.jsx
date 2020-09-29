@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "./Header.css";
+import { getProducts } from "../../../services/products";
 
 function Header(props) {
 
+  const [allProducts, setAllProducts] = useState([])
+  const [queriedProducts, setQueriedProducts] = useState([])
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const products = await getProducts()
+      setAllProducts(products)
+      setQueriedProducts(products)
+      console.log(products)
+    }
+    fetchProducts()
+  }, [])
+
+  const handleSearch = event => {
+    const queriedProducts = allProducts.filter(product => product.name.toLowerCase().includes(event.target.value.toLowerCase()))
+    console.log(event.target.value.toLowerCase())
+    console.log(allProducts)
+    setQueriedProducts(queriedProducts)
+  }
 
 
 
@@ -22,7 +42,7 @@ function Header(props) {
       </div>
       <div className="right-side"> 
           <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
-            <input className="search-input" name="Search" type='text' value={props.value} placeholder='Search Product' onChange={(e) => props.onChange(e)} />
+            <input className="search-input" name="Search" type='text' value={props.value} placeholder='Search Product' onChange={handleSearch}  />
             <span><button className="search-button" id="search"> <FontAwesomeIcon className="fa" icon={faSearch} /></button></span>
           </form>
       </div>
