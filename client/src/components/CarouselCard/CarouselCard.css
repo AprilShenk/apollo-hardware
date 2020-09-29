@@ -1,10 +1,11 @@
 .item-image {
-  height: 150px;
-  width: 150px;
-  border-radius: 20px;
+  height: 135px;
+  width: 135px;
+  border-radius: 13px;
   box-shadow: 0px 3px 6px #0D4373;
-  margin-left: 75%;
-  margin-bottom: 20px;
+  /* margin-top: 25px; */
+  /* margin-left: 75%; */
+  /* margin-bottom: 20px; */
   margin-right: 10px;
   padding: 8px;
 }

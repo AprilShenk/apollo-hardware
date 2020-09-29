@@ -47,10 +47,28 @@ const Carousel = () => {
   ));
 
   if (!display) {
-    return <div className="carousel-container">{displayPics2}</div>;
+    return(
+    <div className="carousel-bar">
+      <div>{displayPics2}</div>
+      <div className="carSide">
+          <h5 id="car-title">"Supplies for your<br /> next murder spree"</h5>
+          <button id="car-button" type="submit">Shop More</button>
+      </div>
+    </div>
+    );
+    
   } else {
-    return <div className="carousel-container">{displayPics1}</div>;
+    return (
+    <div className="carousel-bar">
+      <div>{displayPics1}</div>
+      <div className="carSide">
+          <h5 id="car-title">"Supplies for your<br /> next murder spree"</h5>
+          <button id="car-button" type="submit">Shop More</button>
+      </div>
+    </div>
+);
   }
+    
 };
 
 export default Carousel;
