@@ -10,41 +10,33 @@ function Header(props) {
   const [allProducts, setAllProducts] = useState([])
   const [queriedProducts, setQueriedProducts] = useState([])
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const products = await getProducts()
-      setAllProducts(products)
-      setQueriedProducts(products)
-      console.log(products)
-    }
-    fetchProducts()
-  }, [])
+  
 
-  const handleSearch = event => {
+  // const handleChange = event => {
     // function filterTest (allProducts) {
     //   if (event.target.value.toLowerCase() == filter to create a function-test that looks through the all products array and returns watch matches  ) {
         
     //   }
     // }
-    console.log(allProducts)
-    const newQueriedProducts = allProducts.filter((filterResult) => {
-      if (allProducts.product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
-        return (
-          filterResult
-        )
-      }
-    })
+    // console.log(allProducts)
+    // const newQueriedProducts = allProducts.filter((filterResult) => {
+    //   if (allProducts.product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
+    //     return (
+    //       filterResult
+    //     )
+    //   }
+    // })
 
-    const queriedProducts = allProducts.filter((filterResult) => {
-      if (allProducts.product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
-        return (
-          filterResult
-        )
-      }
-    })
+//     const queriedProducts = allProducts.filter((filterResult) => {
+//       if (allProducts.product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
+//         return (
+//           filterResult
+//         )
+//       }
+//     })
 
-    console.log(queriedProducts)
-}
+//     console.log(queriedProducts)
+// }
     
     // const queriedProducts = allProducts.filter(product => product.name.toLowerCase() ===event.target.value.toLowerCase(){return true})
     // console.log(event.target.value.toLowerCase())
@@ -81,7 +73,7 @@ function Header(props) {
             name="Search" type='text'
             value={props.value}
             placeholder='Search Product'
-            onChange={handleSearch} />
+            onChange={props.handleChange} />
             <span><button className="search-button" id="search"> <FontAwesomeIcon className="fa" icon={faSearch} /></button></span>
           </form>
       </div>

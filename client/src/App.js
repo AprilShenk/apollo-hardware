@@ -1,5 +1,5 @@
-import React from "react";
-import {Switch, Route} from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { Switch, Route } from 'react-router-dom'
 import './App.css';
 import Home from './screens/Home/Home'
 import Products from './screens/Products/Products'
@@ -7,26 +7,49 @@ import ProductCreate from './screens/ProductCreate/ProductCreate'
 import ProductDetail from './screens/ProductDetail/ProductDetail'
 import ProductEdit from './screens/ProductEdit/ProductEdit'
 import SearchResults from './screens/SearchResults/SearchResults'
-// import { getProducts } from "./services/products";
+import { getProducts } from "./services/products";
 // import { response } from "express";
 
 function App() {
   // TODO:
-  
+  const [query, setQuery] = useState("")
+  const [allProducts, setAllProducts] = useState([])
+  const [queriedProducts, setQueriedProducts] = useState([])
 
-  // const handleSearch = event => {
-  //   const newQueriedProducts = allProducts.filter(product => product.name.toLowerCase().includes(event.target.value.toLowerCase()))
-  //   setQueriedProducts(newQueriedProducts, () => handleSort(sortType))
-  // }
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const products = await getProducts()
+      setAllProducts(products)
+      console.log(products)
+    }
+    fetchProducts()
+  }, [])
 
-  // allProducts state
-  // queriedProducts state
-  // onChange populate SearchResults
-  // pass results of queriedProducts as prop
+  const handleChange = event => {
+   
+    if (event.target.value.length > 2) {
+      const filteredItems = allProducts.filter((product) => { 
+        if (allProducts.product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
+              return (
+                product
+               )
+             }
+      })
+    }
+    setQueriedProducts(filteredItems)
+  }
+
+
+
+
+
+ 
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/">
+          <Home handleChange={handleChange} />
+        </Route>
         <Route exact path="/products" component={Products} />
         <Route exact path="/add-product" component={ProductCreate} />
         <Route exact path="/products/:id/edit" component={ProductEdit} />
