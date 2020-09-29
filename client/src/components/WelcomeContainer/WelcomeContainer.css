@@ -59,7 +59,7 @@
 }
 
 #homepage-img{
-  height: 490px; 
+  height: 100%; /* put this value in % to fix the margin bottom */
   width: 540px;
 }
 
