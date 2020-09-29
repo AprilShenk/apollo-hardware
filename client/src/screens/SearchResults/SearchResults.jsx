@@ -10,19 +10,9 @@ const SearchResults = (props) => {
   
 
   return (
-    <Layout>
+    <Layout handleChange={props.handleChange}>
       <h1>Search Results</h1>
-      <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
-            <input
-                className="search-input"
-                value={props.value}
-                onChange={(e) => props.onChange(e)}
-                name="Search"
-                placeholder="Search"
-                type="text"
-                autoFocus
-            />
-        </form>
+      
     </Layout>
   );
 };

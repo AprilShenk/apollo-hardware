@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "./Header.css";
@@ -9,6 +9,7 @@ function Header(props) {
 
   const [allProducts, setAllProducts] = useState([])
   const [queriedProducts, setQueriedProducts] = useState([])
+  const history = useHistory()
 
   
 
@@ -68,13 +69,17 @@ function Header(props) {
         </div>
       </div>
       <div className="right-side"> 
-          <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
+        <form className="search-form"
+          onSubmit={(e) => e.preventDefault()}>
           <input className="search-input"
             name="Search" type='text'
             value={props.value}
             placeholder='Search Product'
-            onChange={props.handleChange} />
-            <span><button className="search-button" id="search"> <FontAwesomeIcon className="fa" icon={faSearch} /></button></span>
+            onChange={props.handleChange}
+            onClick={() => history.push("/products/search-results")}/>
+          <span><button className="search-button"
+            id="search">
+            <FontAwesomeIcon className="fa" icon={faSearch} /></button></span>
           </form>
       </div>
     </div>

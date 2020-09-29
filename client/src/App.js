@@ -26,17 +26,18 @@ function App() {
   }, [])
 
   const handleChange = event => {
-   
+  
     if (event.target.value.length > 2) {
-      const filteredItems = allProducts.filter((product) => { 
-        if (allProducts.product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
+      const filteredItems = allProducts && allProducts.filter((product) => { 
+        if (product.name.toLowerCase().includes(event.target.value.toLowerCase())) {
               return (
                 product
-               )
-             }
+              )
+        }
       })
+      setQueriedProducts(filteredItems)
     }
-    setQueriedProducts(filteredItems)
+    
   }
 
 
@@ -53,7 +54,9 @@ function App() {
         <Route exact path="/products" component={Products} />
         <Route exact path="/add-product" component={ProductCreate} />
         <Route exact path="/products/:id/edit" component={ProductEdit} />
-        <Route exact path="/products/search-results" component={SearchResults} />
+        <Route exact path="/products/search-results">
+          <SearchResults handleChange={handleChange} />
+        </Route>
         <Route exact path="/products/:id" component={ProductDetail} />
       </Switch>
     </div>
