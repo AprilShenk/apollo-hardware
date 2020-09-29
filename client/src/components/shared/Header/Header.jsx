@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink, useHistory } from 'react-router-dom';
+import React, { useEffect, useRef } from "react";
+import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "./Header.css";
@@ -8,6 +8,13 @@ import "./Header.css";
 function Header(props) {
 
   const history = useHistory()
+  const inputElement = useRef(null)
+  const location = useLocation();
+  useEffect(() => {
+    if (location.pathname === "/products/search-results") {
+      inputElement.current.focus()
+    }
+  }, [location])
 
   return (
     <div className="header">
@@ -37,7 +44,9 @@ function Header(props) {
             value={props.value}
             placeholder='Search Product'
             onChange={props.handleChange}
-            onClick={() => history.push("/products/search-results")}/>
+            onClick={() => history.push("/products/search-results")}
+            ref={inputElement}  
+          />
           <span><button className="search-button"
             id="search">
             <FontAwesomeIcon className="fa" icon={faSearch} /></button></span>

@@ -3,6 +3,10 @@
 display: flex;
 justify-content: space-around;
 flex-direction: row;
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 2rem;
 }
 
 .bar > div {
