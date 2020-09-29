@@ -6,17 +6,21 @@ import Layout from "../../components/shared/Layout/Layout";
 const SearchResults = (props) => {
 
 
-
-  
-
   return (
     <Layout handleChange={props.handleChange}>
       <h1>Search Results</h1>
       {props.queriedProducts.map((product, index) => {
         return (
           <div className="result-card">
+            {product._id}
             {product.name}
-
+            {product.imgURL1}
+            {product.imgURL2}
+            {product.imgURL3}
+            {product.description}
+            {product.price}
+            {product.rating}
+            {index}
           </div>
         )
         

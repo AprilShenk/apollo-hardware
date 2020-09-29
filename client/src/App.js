@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, useLocation } from 'react-router-dom'
 import './App.css';
 import Home from './screens/Home/Home'
 import Products from './screens/Products/Products'
@@ -12,7 +12,7 @@ import { getProducts } from "./services/products";
 
 function App() {
   // TODO:
-  const [query, setQuery] = useState("")
+  const setQuery = useState("")
   const [allProducts, setAllProducts] = useState([])
   const [queriedProducts, setQueriedProducts] = useState([])
 
@@ -20,10 +20,16 @@ function App() {
     const fetchProducts = async () => {
       const products = await getProducts()
       setAllProducts(products)
-      setQuery("")
+      
     }
     fetchProducts()
   }, [])
+
+  const location = useLocation();
+  useEffect(() => {
+    const currentPath = location.pathname;
+    setQueriedProducts([]);
+  }, [location])
 
   const handleChange = event => {
   

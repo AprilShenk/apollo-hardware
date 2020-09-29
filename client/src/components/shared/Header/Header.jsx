@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "./Header.css";
-import { getProducts } from "../../../services/products";
+
 
 function Header(props) {
 
-  const [allProducts, setAllProducts] = useState([])
-  const [queriedProducts, setQueriedProducts] = useState([])
   const history = useHistory()
 
   return (
