@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Redirect } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
 import { deleteProduct, getProduct } from "../../services/products";
 import DetailCarousel from "../../components/DetailCarousel/DetailCarousel";
@@ -10,6 +10,7 @@ import { getStars } from '../../utils/rating'
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
+  const [isDeleted, setDeleted] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -23,6 +24,15 @@ const ProductDetail = () => {
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
+  }
+
+  if (isDeleted) {
+    return <Redirect to={"/products"} />
+  }
+
+  const handleDelete = async () => {
+    await deleteProduct(product._id)
+    setDeleted(!isDeleted)
   }
 
   return (
@@ -48,7 +58,7 @@ const ProductDetail = () => {
           </button>
           <button
             className="delete-button"
-            onClick={() => deleteProduct(product._id)}
+            onClick={handleDelete}
           >
             Delete Product
           </button>
