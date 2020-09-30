@@ -7,7 +7,7 @@ const WelcomeContainer = () => {
     <div className="welcome-container">
       <div className="welcome-left-side">
         <h1 className="welcome-title">WELCOME TO APOLLO HARDWARE</h1>
-        <h2 className="welcome-subtitle">We rise about your competition</h2>
+        <h2 className="welcome-subtitle">We rise above your competition</h2>
         <p className="welcome-p">At Apollo Hardware we have been helping customers for 666 years make it to the moon and back with their project ideas. Help us inspire you to do more on your next project</p>
         <Link to="/add-product">
         <button id="add-product" type="submit">ADD PRODUCT</button>

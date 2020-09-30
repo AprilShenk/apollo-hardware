@@ -7,4 +7,10 @@
 
 body, html {
   font-family: 'Open Sans', sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
+.layout:not(:last-child) {
+  padding-bottom: 2rem;
+}
+

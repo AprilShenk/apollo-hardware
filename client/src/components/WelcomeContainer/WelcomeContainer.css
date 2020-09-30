@@ -5,6 +5,7 @@
   padding-left: 139px;
   padding-right: 139px;
   margin-bottom: 0.5em;
+  
 }
 
 .welcome-left-side{
@@ -14,6 +15,7 @@
   align-content: center;
   margin-right: 5em;
   color: #01192E;
+  margin-bottom: 1.5em;
 }
 
 .welcome-title {
@@ -22,6 +24,7 @@
   line-height: 1;
   margin-top: .1em;
   margin-bottom: .20em;
+  color: #01192E;
 }
 
 .welcome-subtitle{
@@ -59,7 +62,7 @@
 }
 
 #homepage-img{
-  height: 490px; 
+  height: 100%; /* put this value in % to fix the margin bottom */
   width: 540px;
 }
 

@@ -5,8 +5,8 @@ import Footer from "../Footer/Footer"
 const Layout = (props) => {
   return (
     <div className="layout">
-      <Header />
-      <div>{props.children}</div>
+      <Header handleChange={props.handleChange} />
+      <div className="props-children">{props.children}</div>
       <Footer />
     </div>
   );
