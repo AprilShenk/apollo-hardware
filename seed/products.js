@@ -22,7 +22,7 @@ const main = async () => {
       reviews: [
         {
           author: "MAAP",
-          rating: 5,
+          rating: 4,
           description: "Cool!",
         },
         {
@@ -44,6 +44,18 @@ const main = async () => {
         "Perfect for splitting logs and kindling. Fiberglass double injected handle with over strike protect, for easy gripping, control, comfort, increased strength and durability.",
       price: "33.45",
       quantity: "5",
+      reviews: [
+        {
+          author: "MAAP",
+          rating: 4,
+          description: "Cool!",
+        },
+        {
+          author: "AMS",
+          rating: 1,
+          description: "Not cool!",
+        },
+      ]
     },
     {
       name: "Estwing 16 in Framing Hammer",
@@ -65,7 +77,7 @@ const main = async () => {
         },
         {
           author: "AMS",
-          rating: 1,
+          rating: 2,
           description: "Not cool!",
         },
       ],
@@ -91,7 +103,7 @@ const main = async () => {
         },
         {
           author: "AMS",
-          rating: 1,
+          rating: 2,
           description: "Not cool!",
         },
       ],
@@ -116,7 +128,7 @@ const main = async () => {
         },
         {
           author: "AMS",
-          rating: 1,
+          rating: 2,
           description: "Not cool!",
         },
       ],
@@ -243,7 +255,7 @@ const main = async () => {
         },
         {
           author: "AMS",
-          rating: 1,
+          rating: 3,
           description: "Not cool!",
         },
       ],
