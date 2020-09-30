@@ -9,8 +9,6 @@ const ProductCreate = () => {
 
   const changeText = (text) => setButtonText(text);
 
- 
-
   const [product, setProduct] = useState({
     name: "",
     imgURL1: "",
