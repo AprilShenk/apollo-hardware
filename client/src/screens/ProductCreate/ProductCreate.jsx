@@ -5,6 +5,9 @@ import { Redirect } from "react-router-dom";
 import "./ProductCreate.css";
 
 const ProductCreate = () => {
+  const [buttonText, setButtonText] = useState("PUBLISH");
+
+  const changeText = (text) => setButtonText(text);
 
   const [product, setProduct] = useState({
     name: "",
@@ -18,7 +21,6 @@ const ProductCreate = () => {
   });
 
   const [isCreated, setCreated] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -42,13 +44,7 @@ const ProductCreate = () => {
       <div>
         <h3 className="admin">ADMIN</h3>
         <div className="create-container">
-          <form
-            className="create-form"
-            onSubmit={() => {
-              handleSubmit();
-              setIsClicked(true);
-            }}
-          >
+          <form className="create-form" onSubmit={handleSubmit}>
             <div className="image-container">
               <label htmlFor="imgURL1">Image # 1</label>
               <input
@@ -136,15 +132,13 @@ const ProductCreate = () => {
                   />
                 </div>
               </div>
-              { !isClicked ?
-              <button type="submit" className="submit-btn">
-                  PUBLISH
+              <button
+                type="submit"
+                className={`submit-button`}
+                onClick={() => changeText("PUBLISHED")}
+              >
+                {buttonText}
               </button>
-                :
-              <button type="submit" className="submit-btn-active">
-                  PUBLISHED
-              </button>
-              }
             </div>
           </form>
         </div>
