@@ -10,12 +10,13 @@
 .thumbnails {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .image-thumbnail {
   height: 85px;
   width: 85px;
+  margin:7px;
 }
 
 .show-image {

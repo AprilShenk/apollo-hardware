@@ -8,27 +8,36 @@
 .product-info-aside {
   width: 60%;
   margin-left: 40px;
+  
+  
 }
 
 .edit-button {
-  width: 337px;
-  height: 62px;
+  width: 250px;
+  height: 48px;
   font-size: x-large;
   font-weight: bolder;
-  border-radius: 20px;
-  color: black;
-  border: 3px solid #0d4373;
+  border-radius: 15px;
+  background-color: white;
+  border: none;
   margin: 0 15px 15px 0;
+  box-shadow: -1px 5px 8px #4e8aaf;
 }
-:visited {
+.edit-link{
   color: black;
+  text-transform: uppercase;
 }
 
 .delete-button {
-  width: 150px;
+  width: 170px;
   height: 29px;
   border-radius: 20px;
-  border: 3px solid #0d4373;
+  border: 3px solid #148dd9;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 0 15px 15px 0;
 }
 .rating {
   color: #F2B84B;

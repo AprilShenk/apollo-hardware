@@ -52,9 +52,7 @@ const ProductDetail = () => {
           <p>Price: ${product.price}</p>
           <p>Qty: {product.quantity}</p>
           <button className="edit-button">
-            <Link className="edit-link" to={`/products/${product._id}/edit`}>
-              Edit Product
-            </Link>
+            <Link className="edit-link" to={`/products/${product._id}/edit`}>Edit Product</Link>
           </button>
           <button
             className="delete-button"
