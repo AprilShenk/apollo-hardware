@@ -1,6 +1,6 @@
 import React from "react";
 import "./ReviewForm.css";
-const ReviewForm = () => {
+const ReviewForm = ({ author, rating, description, onChange, onSubmit}) => {
   return (
     <div className="review-form-container">
       <form className="review-create-form" onSubmit={(e) => onSubmit(e)}>

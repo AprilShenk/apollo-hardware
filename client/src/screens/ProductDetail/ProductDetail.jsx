@@ -1,17 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link, Redirect } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
-import { deleteProduct, getProduct } from "../../services/products";
+import {
+  deleteProduct,
+  getProduct,
+  updateProduct,
+} from "../../services/products";
 import DetailCarousel from "../../components/DetailCarousel/DetailCarousel";
 import "./ProductDetail.css";
 import BackArrow from "../../components/BackArrow/BackArrow";
-import { getStars } from '../../utils/rating'
+import { getStars } from "../../utils/rating";
+import ReviewForm from "../../components/ReviewForm/ReviewForm";
+import Reviews from "../../components/Reviews/Reviews";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const [isDeleted, setDeleted] = useState(false);
   const { id } = useParams();
+
+  const [review, setReview] = useState({
+    author: "",
+    rating: "",
+    description: "",
+  });
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -27,13 +39,28 @@ const ProductDetail = () => {
   }
 
   if (isDeleted) {
-    return <Redirect to={"/products"} />
+    return <Redirect to={"/products"} />;
   }
 
   const handleDelete = async () => {
-    await deleteProduct(product._id)
-    setDeleted(!isDeleted)
-  }
+    await deleteProduct(product._id);
+    setDeleted(!isDeleted);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setReview({
+      ...review,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    product.reviews.push(review);
+    setProduct(product);
+    await updateProduct(id, product);
+  };
 
   return (
     <Layout>
@@ -52,15 +79,24 @@ const ProductDetail = () => {
           <p>Price: ${product.price}</p>
           <p>Qty: {product.quantity}</p>
           <button className="edit-button">
-            <Link className="edit-link" to={`/products/${product._id}/edit`}>Edit Product</Link>
+            <Link className="edit-link" to={`/products/${product._id}/edit`}>
+              Edit Product
+            </Link>
           </button>
-          <button
-            className="delete-button"
-            onClick={handleDelete}
-          >
+          <button className="delete-button" onClick={handleDelete}>
             Delete Product
           </button>
         </aside>
+        <div className="reviews wrapper">
+          <ReviewForm
+            author={review.author}
+            rating={review.rating}
+            description={review.description}
+            onSubmit={handleSubmit}
+            onChangle={handleChange}
+          />
+          <Reviews reviews={product.reviews} />
+        </div>
       </div>
     </Layout>
   );
