@@ -1,14 +1,11 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { createProduct } from "../../services/products";
-import { Redirect } from "react-router-dom";
 import "./ProductCreate.css";
 
 const ProductCreate = () => {
   const [buttonText, setButtonText] = useState("PUBLISH");
-
-  const changeText = (text) => setButtonText(text);
-
+  const [Created, setCreated] = useState(false);
   const [product, setProduct] = useState({
     name: "",
     imgURL1: "",
@@ -20,7 +17,7 @@ const ProductCreate = () => {
     quantity: "",
   });
 
-  const [isCreated, setCreated] = useState(false);
+  const changeText = (text) => setButtonText(text);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -32,11 +29,26 @@ const ProductCreate = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const created = await createProduct(product);
-    setCreated({ created });
+    await createProduct(product);
+    setCreated(!Created);
   };
-  if (isCreated) {
-    return <Redirect to={"/products"} />;
+
+  if (Created) {
+    alert(`${product.name} was created`);
+    setTimeout(() => {
+      changeText(`PUBLISH`);
+      setProduct({
+        name: "",
+        imgURL1: "",
+        imgURL2: "",
+        imgURL3: "",
+        description: "",
+        price: "",
+        rating: 0,
+        quantity: "",
+      });
+    }, 2000);
+    setCreated(!Created);
   }
 
   return (
