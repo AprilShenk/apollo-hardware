@@ -1,10 +1,11 @@
 import React from "react";
 import "./ReviewForm.css";
-const ReviewForm = ({ author, rating, description, onChange, onSubmit}) => {
+const ReviewForm = ({ author, rating, description, onChange, onSubmit }) => {
   return (
     <div className="review-form-container">
       <form className="review-create-form" onSubmit={(e) => onSubmit(e)}>
         <input
+          type="text"
           className="review-form-author"
           placeholder="Name"
           value={author}
@@ -13,6 +14,7 @@ const ReviewForm = ({ author, rating, description, onChange, onSubmit}) => {
           onChange={(e) => onChange(e)}
         />
         <input
+          type="number"
           className="review-form-rating"
           placeholder="Rating (1-5)"
           value={rating}

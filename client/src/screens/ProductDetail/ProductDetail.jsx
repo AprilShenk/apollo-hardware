@@ -93,7 +93,7 @@ const ProductDetail = () => {
             rating={review.rating}
             description={review.description}
             onSubmit={handleSubmit}
-            onChangle={handleChange}
+            onChange={handleChange}
           />
           <Reviews reviews={product.reviews} />
         </div>
