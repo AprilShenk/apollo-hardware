@@ -41,7 +41,7 @@ const Product = new Schema(
 );
 
 Product.virtual('rating').get(function () {
-  return this.reviews.reduce((total, review) => total + review.rating, 0) / this.reviews.length
+  return Math.ceil(this.reviews.reduce((total, review) => total + review.rating, 0) / this.reviews.length)
 })
 
 module.exports = mongoose.model("products", Product);
