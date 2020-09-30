@@ -44,8 +44,8 @@ const ProductCreate = () => {
         imgURL3: "",
         description: "",
         price: "",
-        rating: 0,
         quantity: "",
+        reviews: []
       });
     }, 2000);
     setCreated(!Created);

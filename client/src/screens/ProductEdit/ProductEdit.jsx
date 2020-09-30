@@ -13,8 +13,8 @@ const ProductEdit = (props) => {
     imgURL3: "",
     description: "",
     price: 0,
-    rating: 0,
     quantity: 0,
+    reviews: []
   });
 
   const [isUpdated, setUpdated] = useState(false);
