@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getProducts } from "../../services/products";
 import CarouselCard from "../../components/CarouselCard/CarouselCard";
 import "./Carousel.css";
+import { Link } from "react-router-dom";
 
 const Carousel = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -52,8 +53,10 @@ const Carousel = () => {
       <div>{displayPics2}</div>
       <div className="carSide">
           <h5 id="car-title">"Supplies for your<br /> next murder spree"</h5>
-          <button id="car-button" type="submit">Shop More</button>
-      </div>
+          <Link to="/products">
+            <button id="car-button" type="submit">Shop More</button>
+          </Link>
+        </div>
     </div>
     );
     
@@ -63,7 +66,9 @@ const Carousel = () => {
       <div>{displayPics1}</div>
       <div className="carSide">
           <h5 id="car-title">"Supplies for your<br /> next murder spree"</h5>
-          <button id="car-button" type="submit">Shop More</button>
+          <Link to="/products">
+            <button id="car-button" type="submit">Shop More</button>
+          </Link>
       </div>
     </div>
 );
