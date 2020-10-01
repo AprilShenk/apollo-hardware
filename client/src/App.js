@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./screens/Home/Home";
 import Products from "./screens/Products/Products";
@@ -21,12 +21,6 @@ function App() {
     fetchProducts();
   }, []);
 
-  const location = useLocation();
-
-  useEffect(() => {
-    setQueriedProducts([]);
-  }, [location]);
-
   const handleChange = (event) => {
     if (event.target.value.length > 2) {
       const filteredItems =
@@ -38,8 +32,8 @@ function App() {
               .includes(event.target.value.toLowerCase())
           ) {
             return product;
-          } 
-          return null
+          }
+          return null;
         });
       setQueriedProducts(filteredItems);
     }
@@ -58,6 +52,7 @@ function App() {
           <SearchResults
             handleChange={handleChange}
             queriedProducts={queriedProducts}
+            setQueriedProducts={setQueriedProducts}
           />
         </Route>
         <Route exact path="/products/:id" component={ProductDetail} />
