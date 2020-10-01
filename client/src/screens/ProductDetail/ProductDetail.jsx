@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link, Redirect } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
-import { deleteProduct, getProduct } from "../../services/products";
+import { deleteProduct, getProduct, updateProduct } from "../../services/products";
 import DetailCarousel from "../../components/DetailCarousel/DetailCarousel";
 import "./ProductDetail.css";
 import BackArrow from "../../components/BackArrow/BackArrow";
 import { getStars } from '../../utils/rating'
+import ReviewForm from "../../components/ReviewForm/ReviewForm";
+import Reviews from "../../components/Reviews/Reviews";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const [isDeleted, setDeleted] = useState(false);
+  const [review, setReview] = useState({
+    author: "",
+    rating: "",
+    description: "",
+  });
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -34,6 +42,20 @@ const ProductDetail = () => {
     await deleteProduct(product._id)
     setDeleted(!isDeleted)
   }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setReview({
+      ...review,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    product.reviews.push(review);
+    setProduct(product);
+    await updateProduct(id, product);
+  };
 
   return (
     <Layout>
@@ -61,6 +83,16 @@ const ProductDetail = () => {
             Delete Product
           </button>
         </aside>
+        <div className="reviews wrapper">
+          <ReviewForm
+            author={review.author}
+            rating={review.rating}
+            description={review.description}
+            onSubmit={handleSubmit}
+            onChange={handleChange}
+          />
+          <Reviews reviews={product.reviews} />
+        </div>
       </div>
     </Layout>
   );
