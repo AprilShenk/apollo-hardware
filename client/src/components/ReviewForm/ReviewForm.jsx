@@ -8,6 +8,7 @@ const ReviewForm = ({ author, rating, description, onChange, onSubmit }) => {
           type="text"
           className="review-form-author"
           placeholder="Name"
+          name="author"
           value={author}
           required
           autoFocus
@@ -17,6 +18,7 @@ const ReviewForm = ({ author, rating, description, onChange, onSubmit }) => {
           type="number"
           className="review-form-rating"
           placeholder="Rating (1-5)"
+          name="rating"
           value={rating}
           required
           autoFocus
