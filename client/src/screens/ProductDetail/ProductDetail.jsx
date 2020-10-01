@@ -87,7 +87,7 @@ const ProductDetail = () => {
           name={product.name}
         />
         <div className="product-info-aside">
-          <h2 id="detail-title">{product.name}</h2>
+          <h2 className="detail-title">{product.name}</h2>
           <h3 className="rating">{getStars(product.rating)}</h3>
           <p id="product-description">{product.description}</p>
           <a id="price-qty-container">
@@ -103,8 +103,9 @@ const ProductDetail = () => {
             Delete Product
           </button>
         </div>
+        <div id="reviews-container">
         <div className="reviews-wrapper">
-          <h2 id="review-title">Write a Review</h2>
+          <h2 className="detail-title">Write a Review</h2>
           <ReviewForm
             author={review.author}
             rating={review.rating}
@@ -114,6 +115,7 @@ const ProductDetail = () => {
           />
           <Reviews reviews={product.reviews} />
         </div>
+        </div> 
       </div>
     </Layout>
   );
