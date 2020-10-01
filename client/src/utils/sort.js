@@ -1,5 +1,13 @@
-const compareKey = (key) => (a, b) =>
-  a[key] === b[key] ? (a[key] < b[key] ? -1 : 1) : 0;
+const compareKey = key =>
+  (a, b) => {
+    if (a[key] < b[key]) {
+      return -1
+    }
+    if (a[key] > b[key]) {
+      return 1
+    }
+    return 0
+  }
 
 export const mostPopular = (arr) =>
   arr.sort((a, b) => parseInt(b.rating) - parseInt(a.rating));
