@@ -86,14 +86,12 @@ const ProductDetail = () => {
           imgURL3={product.imgURL3}
           name={product.name}
         />
-        <div className="product-info-aside">
-          <h2 id="detail-title">{product.name}</h2>
+        <aside className="product-info-aside">
+          <h2>{product.name}</h2>
           <h3 className="rating">{getStars(product.rating)}</h3>
-          <p id="product-description">{product.description}</p>
-          <a id="price-qty-container">
-          <a id="product-price"><span>Price:</span> ${product.price}</a>
-          <a id="product-qty"><span>Qty:</span> {product.quantity}</a>
-          </a>
+          <p>{product.description}</p>
+          <p>Price: ${product.price}</p>
+          <p>Qty: {product.quantity}</p>
           <button className="edit-button">
             <Link className="edit-link" to={`/products/${product._id}/edit`}>
               Edit Product
@@ -102,9 +100,8 @@ const ProductDetail = () => {
           <button className="delete-button" onClick={handleDelete}>
             Delete Product
           </button>
-        </div>
-        <div className="reviews-wrapper">
-          <h2 id="review-title">Write a Review</h2>
+        </aside>
+        <div className="reviews wrapper">
           <ReviewForm
             author={review.author}
             rating={review.rating}
