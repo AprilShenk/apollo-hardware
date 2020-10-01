@@ -1,0 +1,21 @@
+
+
+.product-review{
+  width: 80%;
+  border: 2px solid  #707070a2;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 5px 7px 20px 7px;
+  padding-left: 5px;
+}
+
+#reviews-rating{
+  text-align: right;
+  color: #F2B84B;
+  font-size: 1.2em;
+  margin: 0 auto;
+}
+
+.reviews-info{
+  margin: 0 auto;
+}
