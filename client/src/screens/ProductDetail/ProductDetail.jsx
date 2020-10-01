@@ -86,8 +86,8 @@ const ProductDetail = () => {
           imgURL3={product.imgURL3}
           name={product.name}
         />
-        <aside className="product-info-aside">
-          <h2>{product.name}</h2>
+        <div className="product-info-aside">
+          <h2 className="detail-title">{product.name}</h2>
           <h3 className="rating">{getStars(product.rating)}</h3>
           <p>{product.description}</p>
           <p>Price: ${product.price}</p>
@@ -100,8 +100,10 @@ const ProductDetail = () => {
           <button className="delete-button" onClick={handleDelete}>
             Delete Product
           </button>
-        </aside>
-        <div className="reviews wrapper">
+        </div>
+        <div id="reviews-container">
+        <div className="reviews-wrapper">
+          <h2 className="detail-title">Write a Review</h2>
           <ReviewForm
             author={review.author}
             rating={review.rating}
@@ -111,6 +113,7 @@ const ProductDetail = () => {
           />
           <Reviews reviews={product.reviews} />
         </div>
+        </div> 
       </div>
     </Layout>
   );
