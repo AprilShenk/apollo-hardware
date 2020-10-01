@@ -59,7 +59,5 @@ function Header(props) {
 }
 
 // https://github.com/reactjs/react-router-tutorial/tree/master/lessons/05-active-links
-// <img className="search-icon" src="/search-icon.png" alt="Search"></img>
-//<span><button className="search-button" id="search"><i className="fa fa-search"></i></button></span> 
 
 export default Header;

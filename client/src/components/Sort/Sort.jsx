@@ -1,5 +1,5 @@
 import React from "react";
-import './Sort.css'
+import "./Sort.css";
 
 const Sort = (props) => {
   const handleChange = (event) => {

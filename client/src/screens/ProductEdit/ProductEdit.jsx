@@ -14,7 +14,7 @@ const ProductEdit = (props) => {
     description: "",
     price: 0,
     quantity: 0,
-    reviews: []
+    reviews: [],
   });
 
   const [isUpdated, setUpdated] = useState(false);
@@ -88,22 +88,21 @@ const ProductEdit = (props) => {
           </div>
           <div className="image-and-input">
             <img
-            className="edit-product-image"
-            src={product.imgURL3}
-            alt={product.name}
-          />
-          <form onSubmit={handleSubmit}>
-            <input
-              className="edit-input-image-link"
-              placeholder="Image Link"
-              value={product.imgURL3}
-              name="imgURL3"
-              required
-              onChange={handleChange}
+              className="edit-product-image"
+              src={product.imgURL3}
+              alt={product.name}
             />
-          </form>
+            <form onSubmit={handleSubmit}>
+              <input
+                className="edit-input-image-link"
+                placeholder="Image Link"
+                value={product.imgURL3}
+                name="imgURL3"
+                required
+                onChange={handleChange}
+              />
+            </form>
           </div>
-          
         </div>
         <form className="edit-form" onSubmit={handleSubmit}>
           <input
