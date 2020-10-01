@@ -1,11 +1,11 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { createProduct } from "../../services/products";
 import "./ProductCreate.css";
 
 const ProductCreate = () => {
   const [buttonText, setButtonText] = useState("PUBLISH");
-  const [Created, setCreated] = useState(false);
+  const [created, setCreated] = useState(false);
   const [product, setProduct] = useState({
     name: "",
     imgURL1: "",
@@ -30,10 +30,10 @@ const ProductCreate = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await createProduct(product);
-    setCreated(!Created);
+    setCreated(!created);
   };
 
-  if (Created) {
+  if (created) {
     alert(`${product.name} was created`);
     setTimeout(() => {
       changeText(`PUBLISH`);
@@ -45,10 +45,10 @@ const ProductCreate = () => {
         description: "",
         price: "",
         quantity: "",
-        reviews: []
+        reviews: [],
       });
     }, 2000);
-    setCreated(!Created);
+    setCreated(!created);
   }
 
   return (

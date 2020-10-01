@@ -33,11 +33,11 @@ const ProductDetail = () => {
       setLoaded(true);
     };
     fetchProduct();
-  }, [id]);
+  }, [id, review]);
 
   useEffect(() => {
     setReview(review)
-  },[review])
+  }, [review])
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -64,8 +64,8 @@ const ProductDetail = () => {
     e.preventDefault();
     product.reviews.push(review);
     setProduct(product);
-    const updated = await updateProduct(id, product);
-    setUpdated(updated);
+    await updateProduct(id, product);
+    setUpdated(!isUpdated);
     setReview({
       author: "",
       rating: "",
@@ -89,11 +89,9 @@ const ProductDetail = () => {
         <div className="product-info-aside">
           <h2 className="detail-title">{product.name}</h2>
           <h3 className="rating">{getStars(product.rating)}</h3>
-          <p id="product-description">{product.description}</p>
-          <a id="price-qty-container">
-          <a id="product-price"><span>Price:</span> ${product.price}</a>
-          <a id="product-qty"><span>Qty:</span> {product.quantity}</a>
-          </a>
+          <p>{product.description}</p>
+          <p>Price: ${product.price}</p>
+          <p>Qty: {product.quantity}</p>
           <button className="edit-button">
             <Link className="edit-link" to={`/products/${product._id}/edit`}>
               Edit Product

@@ -1,13 +1,13 @@
-.results-container{
+.results-container {
   margin: 0 auto;
   padding-left: 139px;
   padding-right: 139px;
   padding-bottom: 140px;
 }
 
-.search-title{
+.search-title {
   font-size: 3.12em;
-  color: #01192E;
+  color: #01192e;
   display: flex;
   /* margin: 0 auto; */
 }
