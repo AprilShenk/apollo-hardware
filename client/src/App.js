@@ -42,9 +42,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/">
-          <Home handleChange={handleChange} />
-        </Route>
+        <Route exact path="/" component={Home} />
         <Route exact path="/products" component={Products} />
         <Route exact path="/add-product" component={ProductCreate} />
         <Route exact path="/products/:id/edit" component={ProductEdit} />

@@ -3,9 +3,9 @@ import Layout from "../../components/shared/Layout/Layout";
 import Carousel from '../../components/Carousel/Carousel'
 import WelcomeContainer from '../../components/WelcomeContainer/WelcomeContainer'
 
-const Home = (props) => {
+const Home = () => {
   return (
-    <Layout handleChange={props.handleChange}>
+    <Layout>
       <Carousel />
       <WelcomeContainer/>
     </Layout>
