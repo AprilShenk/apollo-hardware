@@ -116,7 +116,7 @@ const ProductEdit = (props) => {
             onChange={handleChange}
           />
           <textarea
-            className="textarea-description"
+            className="input-description"
             rows={10}
             cols={78}
             placeholder="Description"
