@@ -30,9 +30,7 @@ const DetailCarousel = (props) => {
           onClick={handleImageClick}
         />
       </div>
-      <div className="show-image-container">
-        <img className="show-image" src={showImage} alt={props.name} />
-      </div>  
+      <img className="show-image" src={showImage} alt={props.name} />
     </div>
   );
 };
