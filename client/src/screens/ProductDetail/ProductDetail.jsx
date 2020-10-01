@@ -73,9 +73,6 @@ const ProductDetail = () => {
     })
   };
 
- 
-
-
   return (
     <Layout>
       <BackArrow />

@@ -8,8 +8,6 @@
 .product-info-aside {
   width: 60%;
   margin-left: 40px;
-  
-  
 }
 
 .edit-button {
@@ -23,7 +21,7 @@
   margin: 0 15px 15px 0;
   box-shadow: -1px 5px 8px #4e8aaf;
 }
-.edit-link{
+.edit-link {
   color: black;
   text-transform: uppercase;
 }
@@ -40,10 +38,10 @@
   margin: 0 15px 15px 0;
 }
 .rating {
-  color: #F2B84B;
+  color: #f2b84b;
 }
 
-.product-detail{
+.product-detail {
   display: grid;
   grid-template-columns: auto auto 60%;
   grid-gap: 50px;
@@ -51,14 +49,13 @@
   grid-row-end: 1;
 }
 .imgCont {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #imgBig {
-  width:100%;
+  width: 100%;
 }
 
 #imgSmall {
