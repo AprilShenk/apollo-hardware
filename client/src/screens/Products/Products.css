@@ -1,16 +1,17 @@
 .products {
   display: flex;
   flex-flow: wrap;
-  max-width: 80%;
+  max-width: 90%;
   justify-content: space-evenly;
   margin: 0 auto;
   padding-bottom: 25px;
 }
+
 #products-title {
-  margin-left: 13.5%;
   margin-top: 40px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #01192e;
 }
 
