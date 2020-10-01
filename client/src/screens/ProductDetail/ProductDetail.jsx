@@ -37,7 +37,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     setReview(review)
-  })
+  },[review])
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -66,7 +66,14 @@ const ProductDetail = () => {
     setProduct(product);
     const updated = await updateProduct(id, product);
     setUpdated(updated);
+    setReview({
+      author: "",
+      rating: "",
+      description: ""
+    })
   };
+
+ 
 
 
   return (
