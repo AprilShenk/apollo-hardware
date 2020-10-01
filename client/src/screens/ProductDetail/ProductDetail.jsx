@@ -103,7 +103,8 @@ const ProductDetail = () => {
             Delete Product
           </button>
         </div>
-        <div className="reviews wrapper">
+        <div className="reviews-wrapper">
+          <h2 id="review-title">Write a Review</h2>
           <ReviewForm
             author={review.author}
             rating={review.rating}

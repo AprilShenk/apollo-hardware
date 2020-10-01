@@ -117,3 +117,10 @@ flex-wrap: wrap;
   width: 60%;
 }
 
+.reviews-wrapper {
+  display: flex;
+  align-items: flex-end;
+  width: 50%;
+  flex-direction: column;
+}
+
