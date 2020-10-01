@@ -55,7 +55,7 @@ const main = async () => {
           rating: 1,
           description: "Not cool!",
         },
-      ]
+      ],
     },
     {
       name: "Estwing 16 in Framing Hammer",
