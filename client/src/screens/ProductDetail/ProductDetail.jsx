@@ -17,6 +17,7 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const [isDeleted, setDeleted] = useState(false);
+  const [isUpdated, setUpdated] = useState(false);
   const { id } = useParams();
 
   const [review, setReview] = useState({
@@ -33,6 +34,10 @@ const ProductDetail = () => {
     };
     fetchProduct();
   }, [id]);
+
+  useEffect(() => {
+    setReview(review)
+  },[review])
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -59,8 +64,17 @@ const ProductDetail = () => {
     e.preventDefault();
     product.reviews.push(review);
     setProduct(product);
-    await updateProduct(id, product);
+    const updated = await updateProduct(id, product);
+    setUpdated(updated);
+    setReview({
+      author: "",
+      rating: "",
+      description: ""
+    })
   };
+
+ 
+
 
   return (
     <Layout>
