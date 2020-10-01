@@ -1,16 +1,19 @@
 .detail-carousel {
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
 }
 .detail-carousel img {
-  border: 3px solid #0d4373;
-  border-radius: 20px;
+  border: 4px solid #0d4373;
+  border-radius: 26px;
 }
 
 .thumbnails {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 7px;
 }
 
 .image-thumbnail {
@@ -19,8 +22,21 @@
   margin: 7px;
 }
 
-.show-image {
+#show-image-container {
+  display: flex;
   height: 338px;
   width: 338px;
-  margin: auto 15px;
+}
+
+.show-image {
+  min-width: 100%;
+  min-height: 100%;
+  /* height: 338px;
+  width: 338px; */
+  margin: 0 auto;
+  max-width: 100%;
+  /* height: auto; */
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
