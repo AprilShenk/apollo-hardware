@@ -33,11 +33,11 @@ const ProductDetail = () => {
       setLoaded(true);
     };
     fetchProduct();
-  }, [id]);
+  }, [id, review]);
 
   useEffect(() => {
     setReview(review)
-  },[review])
+  }, [review])
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -64,8 +64,8 @@ const ProductDetail = () => {
     e.preventDefault();
     product.reviews.push(review);
     setProduct(product);
-    const updated = await updateProduct(id, product);
-    setUpdated(updated);
+    await updateProduct(id, product);
+    setUpdated(!isUpdated);
     setReview({
       author: "",
       rating: "",
