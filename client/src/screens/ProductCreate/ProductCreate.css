@@ -12,7 +12,7 @@ input[type="number"] {
 .admin {
   margin-left: 270px;
   font-size: 50px;
-  color: #01192E;
+  color: #01192e;
 }
 
 .create-container {
@@ -60,7 +60,6 @@ input[type="number"] {
   margin-top: 30px;
 }
 
-
 .price-qty {
   display: flex;
   flex-direction: column;
@@ -76,7 +75,6 @@ input[type="number"] {
 .nums {
   width: 200px;
   height: 30px;
-  
 }
 
 .submit-button {

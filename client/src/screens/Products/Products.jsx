@@ -63,7 +63,6 @@ const Products = () => {
         <h1>All Products</h1>
         <Sort onSubmit={handleSubmit} onChange={handleSort} />
       </div>
-
       <div className="products">{productsJSX}</div>
     </Layout>
   );
