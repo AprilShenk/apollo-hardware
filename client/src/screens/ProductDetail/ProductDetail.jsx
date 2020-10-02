@@ -73,12 +73,9 @@ const ProductDetail = () => {
     })
   };
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 32e879a0485f4dfe8607f0e3016b107ae127b302
   return (
     <Layout>
       <BackArrow />
