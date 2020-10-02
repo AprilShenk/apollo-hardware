@@ -7,11 +7,13 @@ import { Link } from "react-router-dom";
 const Carousel = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [display, setDisplay] = useState(false);
+  const [isLoaded, setLoaded] = useState(false)
 
   useEffect(() => {
     const fetchProducts = async () => {
       const products = await getProducts();
       setAllProducts(products);
+      setLoaded(true);
     };
     fetchProducts();
   }, []);
@@ -52,6 +54,10 @@ const Carousel = () => {
       id={product._id}
     />
   ));
+  
+  if (!isLoaded) {
+    return <h1>Loading...</h1>;
+  }
 
   if (!display) {
     return (

@@ -9,6 +9,7 @@ import { getProducts } from "../../services/products";
 const Products = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [queriedProducts, setQueriedProducts] = useState([]);
+  const [isLoaded, setLoaded] = useState(false)
   const [sort, setSort] = useState([]);
 
   useEffect(() => {
@@ -16,6 +17,7 @@ const Products = () => {
       const products = await getProducts();
       setAllProducts(products);
       setQueriedProducts(mostPopular(products));
+      setLoaded(true)
     };
     fetchProducts();
   }, []);
@@ -57,6 +59,11 @@ const Products = () => {
       key={index}
     />
   ));
+
+  if (!isLoaded) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <Layout>
       <div className="all-products-banner">
