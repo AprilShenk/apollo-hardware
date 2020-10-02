@@ -40,7 +40,8 @@
   background-color: rgba(170, 207, 255, 0.507);
   padding-top: 10px;
   padding-bottom: 15px;
-  
+  border: solid #0d4373;
+  border-radius: 5%;
 }
 .input-name {
   color: #0d4373;
