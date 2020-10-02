@@ -14,8 +14,8 @@ const SearchResults = (props) => {
 
   return (
     <Layout handleChange={props.handleChange}>
+      <h1 className="search-title">SEARCH RESULTS</h1>
       <div className="results-container">
-        <h1 className="search-title">SEARCH RESULTS</h1>
         {props.queriedProducts.map((product, index) => {
           return (
             <div className="result-card" key={index}>

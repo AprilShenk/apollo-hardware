@@ -1,13 +1,11 @@
 .results-container {
   margin: 0 auto;
-  padding-left: 139px;
-  padding-right: 139px;
-  padding-bottom: 140px;
+  display: flex;
+  justify-content: center;
 }
 
 .search-title {
   font-size: 3.12em;
   color: #01192e;
-  display: flex;
-  /* margin: 0 auto; */
+  margin-left: 2rem;
 }
