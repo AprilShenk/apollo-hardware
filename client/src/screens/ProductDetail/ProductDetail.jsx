@@ -91,8 +91,8 @@ const ProductDetail = () => {
           <h3 className="rating">{getStars(product.rating)}</h3>
           <p className="product-description">{product.description}</p>
           <div>
-            <a className="subtitle-info"><span className="detail-subtitle">Price: </span>${product.price}</a>
-            <a className="subtitle-info"><span className="detail-subtitle">Qty:</span> {product.quantity}</a>
+            <span className="subtitle-info"><span className="detail-subtitle">Price: </span>${product.price}</span>
+            <span className="subtitle-info"><span className="detail-subtitle">Qty:</span> {product.quantity}</span>
           </div>
           <div>
             <button className="edit-button">

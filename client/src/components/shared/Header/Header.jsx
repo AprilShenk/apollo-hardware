@@ -18,7 +18,7 @@ function Header(props) {
 
   return (
     <div className="header">
-      <div className="left-side">
+      <div id="left-side">
         <NavLink id="header-title" to="/">
           <img className="attributes"
             id="header-logo"
