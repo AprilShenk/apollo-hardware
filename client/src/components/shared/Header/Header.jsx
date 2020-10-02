@@ -25,7 +25,7 @@ function Header(props) {
             src="https://storage.googleapis.com/p3images/Logos/logo_black_header.png"
             alt="Apollo Hardware Logo"></img>
         </NavLink>
-        <div>
+        <div className="header-links-container">
           <NavLink className="header-links"
             id="header-products"
             to="/products"
@@ -36,7 +36,7 @@ function Header(props) {
             activeStyle={{ color: '#148DD9' }}>ADMIN</NavLink>
         </div>
       </div>
-      <div className="right-side"> 
+      <div className="header-right-side"> 
         <form className="search-form"
           onSubmit={(e) => e.preventDefault()}>
           <input className="search-input"

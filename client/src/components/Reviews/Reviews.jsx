@@ -5,8 +5,10 @@ import "./Reviews.css";
 const Reviews = (props) => {
   const reviewsJSX = props.reviews.map((review, index) => (
     <div className="product-review" key={index}>
-      <p id="reviews-rating">{getStars(review.rating)}</p>
-      <h3 className="reviews-info">{review.author}</h3>
+      <div className="reviews-top">
+        <span className="reviews-info">{review.author}</span>
+        <span id="reviews-rating">{getStars(review.rating)}</span>
+      </div>
       <p className="reviews-info">{review.description}</p>
     </div>
   ));

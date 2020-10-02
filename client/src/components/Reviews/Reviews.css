@@ -1,23 +1,29 @@
 .product-reviews{
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
 }
 
 .product-review{
   width: 80%;
-  border: 2px solid  #707070a2;
+  border: 1px solid #0D4373;
   border-radius: 5px;
   margin-top: 15px;
   padding: 5px 7px 20px 10px;
 }
 
-#reviews-rating{
-  text-align: right;
-  color: #F2B84B;
-  font-size: 1.2em;
-  margin: 0 auto;
+.reviews-top{
+  display: flex;
+  justify-content: space-between;
 }
 
-.reviews-info{
-  margin: 0 auto;
+#reviews-rating{
+  /* display: flex; */
+  /* align-self: flex-end; */
+  color: #F2B84B;
+  font-size: 1.2em;
+  /* margin: 0 auto; */
+  
 }
+
+

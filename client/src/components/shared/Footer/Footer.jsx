@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div>
+    // <div>
       <footer className="bar">
         <div className="data1">1855 Forced Labor Way</div>
         <div className="data2">
@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
         <div className="data3">1(555)382-5347</div>
       </footer>
-    </div>
+    // </div>
   );
 };
 
