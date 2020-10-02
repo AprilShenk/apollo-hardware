@@ -60,7 +60,7 @@ const Products = () => {
   return (
     <Layout>
       <div className="all-products-banner">
-        <h1>All Products</h1>
+        <h1 id="products-title">ALL PRODUCTS</h1>
         <Sort onSubmit={handleSubmit} onChange={handleSort} />
       </div>
       <div className="products">{productsJSX}</div>
