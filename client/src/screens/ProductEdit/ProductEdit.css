@@ -7,7 +7,6 @@
   justify-content: flex-end;
   margin: 0 auto;
   width: 80%;
-  /* background-color: rgb(211, 211, 211); */
 }
 .edit-form {
   display: flex;
@@ -26,7 +25,7 @@
 .edit-input-image-link {
   width: 300px;
   background-color: white;
-  border: none;
+  border: 1px solid#0d4373;
   color: #0d4373;
 }
 .image-and-input {
@@ -37,7 +36,6 @@
 }
 .image-container-edit{
   width: 400px;
-  background-color: rgba(170, 207, 255, 0.507);
   padding-top: 10px;
   padding-bottom: 15px;
   border: solid #0d4373;
