@@ -53,7 +53,7 @@ const ProductCreate = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="create-layout">
         <h3 className="admin">ADMIN</h3>
         <div className="create-container">
           <form className="create-form" onSubmit={handleSubmit}>
@@ -89,6 +89,7 @@ const ProductCreate = () => {
                 onChange={handleChange}
               />
             </div>
+            <div className="create-right">
             <div className="product">
               <div className="product-info">
                 <div className="name-des">
@@ -96,7 +97,7 @@ const ProductCreate = () => {
                   <input
                     type="text"
                     className="name"
-                    placeholder="write your product title here..."
+                    placeholder="Write your product title here..."
                     value={product.name}
                     name="name"
                     required
@@ -110,7 +111,7 @@ const ProductCreate = () => {
                     rows="10"
                     cols="50"
                     className="description"
-                    placeholder="write your product description here..."
+                    placeholder="Write your product description here..."
                     value={product.description}
                     name="description"
                     required
@@ -124,7 +125,7 @@ const ProductCreate = () => {
                   <input
                     type="number"
                     className="nums"
-                    placeholder="write product price here..."
+                    placeholder="Write product price here..."
                     value={product.price}
                     name="price"
                     required
@@ -136,7 +137,7 @@ const ProductCreate = () => {
                   <input
                     type="number"
                     className="nums"
-                    placeholder="write quanity..."
+                    placeholder="Write quanity..."
                     value={product.quantity}
                     name="quantity"
                     required
@@ -151,7 +152,8 @@ const ProductCreate = () => {
               >
                 {buttonText}
               </button>
-            </div>
+              </div>
+              </div>
           </form>
         </div>
       </div>

@@ -15,9 +15,6 @@
 a {
   text-decoration: none;
   text-align: center;
-
-  /* margin: 0 auto; */
-  /* align-items: center; */
 }
 
 #header-logo {
@@ -52,6 +49,10 @@ a {
   font-weight: 800;
   color: #0d4373;
   letter-spacing: 1.5px;
+}
+
+.header-links-container{
+  margin-right: 15px;
 }
 
 #header-products {
@@ -90,4 +91,8 @@ a {
 
 .fa {
   color: #0d4373;
+}
+
+header-right-side{
+  padding-right: 15px;
 }

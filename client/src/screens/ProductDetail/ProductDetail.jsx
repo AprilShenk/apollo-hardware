@@ -107,7 +107,7 @@ const ProductDetail = () => {
         </div>
         <div id="reviews-container">
           <div className="reviews-wrapper">
-            <h2 className="detail-title">Write a Review</h2>
+            <h2 className="detail-title"> &nbsp;Write a Review</h2>
             <ReviewForm
               author={review.author}
               rating={review.rating}
