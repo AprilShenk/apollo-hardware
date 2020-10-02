@@ -4,7 +4,7 @@ const ReviewForm = ({ author, rating, description, onChange, onSubmit }) => {
   return (
     <div className="review-form-container">
       <form className="review-create-form" onSubmit={(e) => onSubmit(e)}>
-     <div className="left-side">
+     <div className="review-left-side">
         <input
           type="text"
           className="review-inputs"

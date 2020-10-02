@@ -48,7 +48,7 @@ input[type="number"] {
 .product {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  /* height: 300px; */
   width: 40vw;
   margin-left: 60px;
 }
@@ -63,18 +63,24 @@ input[type="number"] {
 .price-qty {
   display: flex;
   flex-direction: column;
-  margin: 10px 50px 0 0;
+  width: 47%;
+  /* margin: 10px 50px 0 0; */
+  /* justify-content: space-between; */
 }
 
 .product-numbers {
   margin: 20px 10px 0 0px;
   color: #0d4373;
   display: flex;
+  justify-content: space-between;
 }
 
 .nums {
-  width: 200px;
+  /* width: 200px; */
   height: 30px;
+  border: 1px solid #0D4373;
+  border-radius: 5px;
+  padding-bottom: 15px;
 }
 
 .submit-button {
@@ -101,4 +107,12 @@ input[type="number"] {
 
 .submit-button:target {
   border-color: gold;
+} 
+
+.description, .name{
+  border: 1px solid #0D4373;
+  border-radius: 5px;
+  resize: none;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 15px;
 }
