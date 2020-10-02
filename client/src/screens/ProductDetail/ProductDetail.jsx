@@ -73,6 +73,12 @@ const ProductDetail = () => {
     })
   };
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 32e879a0485f4dfe8607f0e3016b107ae127b302
   return (
     <Layout>
       <BackArrow />
@@ -86,31 +92,36 @@ const ProductDetail = () => {
         <div className="product-info-aside">
           <h2 className="detail-title">{product.name}</h2>
           <h3 className="rating">{getStars(product.rating)}</h3>
-          <p>{product.description}</p>
-          <p>Price: ${product.price}</p>
-          <p>Qty: {product.quantity}</p>
-          <button className="edit-button">
-            <Link className="edit-link" to={`/products/${product._id}/edit`}>
-              Edit Product
+          <p className="product-description">{product.description}</p>
+          <div>
+            <a className="subtitle-info"><span className="detail-subtitle">Price: </span>${product.price}</a>
+            <a className="subtitle-info"><span className="detail-subtitle">Qty:</span> {product.quantity}</a>
+          </div>
+          <div>
+            <button className="edit-button">
+              <Link className="edit-link" to={`/products/${product._id}/edit`}>
+                Edit Product
             </Link>
+            </button>
+            <button className="delete-button" onClick={handleDelete}>
+              Delete Product
           </button>
-          <button className="delete-button" onClick={handleDelete}>
-            Delete Product
-          </button>
+          </div>
         </div>
         <div id="reviews-container">
-        <div className="reviews-wrapper">
-          <h2 className="detail-title">Write a Review</h2>
-          <ReviewForm
-            author={review.author}
-            rating={review.rating}
-            description={review.description}
-            onSubmit={handleSubmit}
-            onChange={handleChange}
-          />
-          <Reviews reviews={product.reviews} />
+          <div className="reviews-wrapper">
+            <h2 className="detail-title">Write a Review</h2>
+            <ReviewForm
+              author={review.author}
+              rating={review.rating}
+              description={review.description}
+              onSubmit={handleSubmit}
+              onChange={handleChange}
+            />
+            <h2 className="detail-title">Customer Reviews</h2>
+            <Reviews reviews={product.reviews} />
+          </div>
         </div>
-        </div> 
       </div>
     </Layout>
   );
