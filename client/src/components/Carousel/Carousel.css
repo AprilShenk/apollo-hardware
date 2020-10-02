@@ -31,3 +31,9 @@
   color: #0d4373;
   margin-bottom: 10px;
 }
+
+@media only screen and (max-width:450px){
+  .carousel-bar {
+    display: none;
+  }
+}

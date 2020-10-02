@@ -96,3 +96,11 @@ a {
 header-right-side{
   padding-right: 15px;
 }
+
+@media (max-width:450px) {
+  .header {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
