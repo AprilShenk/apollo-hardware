@@ -50,6 +50,7 @@ const ProductEdit = (props) => {
   return (
     <Layout>
       <BackArrow />
+      <h1 id="edit-title">Product Edit</h1>
       <section className="edit-section">
         <div className="image-container-edit">
           <div className="image-and-input">

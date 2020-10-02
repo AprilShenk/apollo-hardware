@@ -86,7 +86,7 @@ const ProductDetail = () => {
           imgURL3={product.imgURL3}
           name={product.name}
         />
-        <div className="product-info-aside">
+        <div className="product-info-aside"> 
           <h2 className="detail-title">{product.name}</h2>
           <h3 className="rating">{getStars(product.rating)}</h3>
           <p className="product-description">{product.description}</p>
