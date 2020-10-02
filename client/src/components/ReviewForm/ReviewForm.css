@@ -1,0 +1,30 @@
+.review-create-form{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.left-side{
+  flex-direction: column;
+  width: 50%;
+  margin: 1px;
+  
+}
+
+.right-side{
+  width: 50%;
+}
+
+.review-inputs{
+  width:100%;
+  font-size: 14px;
+}
+
+.review-form-submit{
+  border-radius: 20px;
+  border: 4px solid #148dd9;
+  background-color: white;
+  padding: 4px 2px 4px 2px;
+}
