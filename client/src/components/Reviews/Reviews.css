@@ -26,4 +26,29 @@
   
 }
 
+@media only screen and (max-width: 600px) { 
+  .reviews-wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
 
+  .review-create-form {
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .right-side, 
+  .review-form-description, 
+  .review-inputs {
+    width: 100%;
+    margin: 3px auto;
+  }
+  .review-left-side {
+    width: 100%;
+    margin: 3px auto;
+    order: 1;
+  }
+  .product-review {
+    width: 95%;
+  }
+}
