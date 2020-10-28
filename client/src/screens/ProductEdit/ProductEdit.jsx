@@ -60,7 +60,7 @@ const ProductEdit = (props) => {
               alt={product.name}
             />
             <form onSubmit={handleSubmit}>
-              <input
+              <textarea
                 className="edit-input-image-link"
                 placeholder="Image Link"
                 value={product.imgURL1}
@@ -77,7 +77,7 @@ const ProductEdit = (props) => {
               alt={product.name}
             />
             <form onSubmit={handleSubmit}>
-              <input
+              <textarea
                 className="edit-input-image-link"
                 placeholder="Image Link"
                 value={product.imgURL2}
@@ -94,7 +94,7 @@ const ProductEdit = (props) => {
               alt={product.name}
             />
             <form onSubmit={handleSubmit}>
-              <input
+              <textarea
                 className="edit-input-image-link"
                 placeholder="Image Link"
                 value={product.imgURL3}
@@ -112,7 +112,6 @@ const ProductEdit = (props) => {
             value={product.name}
             name="name"
             required
-            autoFocus
             onChange={handleChange}
           />
           <textarea
