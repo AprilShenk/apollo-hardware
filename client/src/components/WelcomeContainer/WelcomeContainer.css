@@ -72,7 +72,7 @@
     width: 100vw;
   }
   #homepage-img {
-    width: 75vw;
+    width: 100vw;
   }
   .welcome-title {
     font-size: 30px;
@@ -85,6 +85,7 @@
   .welcome-p {
     font-size: 18px;
     padding: 0 0 0 10px;
+    width: 90vw;
   }
   #add-product {
     width: 150px;
@@ -92,6 +93,11 @@
     margin: 0 0 0 10px;
   }
   .welcome-right-side {
-    display: none;
+    /* display: none; */
+    order: -1;
+    margin: 0 auto;
+  }
+  .welcome-left-side {
+    width: 100vw;
   }
 }

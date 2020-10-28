@@ -112,7 +112,7 @@
   .edit-section {
     flex-direction: column;
     width: 90vw;
-    margin: 0 auto 50px;
+    margin-bottom: 50px;
 
   }
   .image-container-edit {
@@ -132,6 +132,10 @@
   }
   .edit-form {
     width: 100%;
+  }
+  .input-name, 
+  .input-description {
+    padding: 0;
   }
   .input-name {
     font-size: 1.5rem;

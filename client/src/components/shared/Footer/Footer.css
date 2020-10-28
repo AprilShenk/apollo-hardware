@@ -9,6 +9,7 @@
   width: 100%;
   height: 2rem;
   padding-bottom: 2rem;
+  background-color: #0e4373;
 }
 
 .bar > div {
@@ -21,17 +22,14 @@
 
 .data1 {
   flex: 1;
-  order: 1;
 }
 
 .data2 {
   flex: 2;
-  order: 2;
 }
 
 .data3 {
   flex: 1;
-  order: 3;
 }
 
 #logoF {
