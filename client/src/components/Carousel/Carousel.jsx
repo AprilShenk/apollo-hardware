@@ -3,6 +3,7 @@ import { getProducts } from "../../services/products";
 import CarouselCard from "../../components/CarouselCard/CarouselCard";
 import "./Carousel.css";
 import { Link } from "react-router-dom";
+import { Breakpoint } from "react-socks";
 
 const Carousel = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -61,6 +62,11 @@ const Carousel = () => {
 
   if (!display) {
     return (
+      <div>
+      <Breakpoint small down>
+        <div> </div>
+        </Breakpoint>
+      <Breakpoint large up>
       <div className="carousel-bar">
         <div>{displayPics2}</div>
         <div className="carSide">
@@ -74,23 +80,33 @@ const Carousel = () => {
             </button>
           </Link>
         </div>
+          </div>
+          </Breakpoint>
       </div>
     );
   } else {
     return (
-      <div className="carousel-bar">
-        <div>{displayPics1}</div>
-        <div className="carSide">
-          <h5 id="car-title">
-            "Supplies for your
-            <br /> next murder spree"
-          </h5>
-          <Link to="/products">
-            <button id="car-button" type="submit">
-              Shop More
-            </button>
-          </Link>
+      <div>
+        <Breakpoint small down>
+          <div> </div>
+        </Breakpoint>
+
+        <Breakpoint large up>
+          <div className="carousel-bar">
+          <div>{displayPics1}</div>
+          <div className="carSide">
+            <h5 id="car-title">
+              "Supplies for your
+              <br /> next murder spree"
+            </h5>
+            <Link to="/products">
+              <button id="car-button" type="submit">
+                Shop More
+              </button>
+            </Link>
+          </div>
         </div>
+        </Breakpoint>
       </div>
     );
   }

@@ -96,3 +96,19 @@ a {
 header-right-side{
   padding-right: 15px;
 }
+
+@media only screen and (max-width: 600px) { 
+  .header {
+    flex-direction: column;
+    align-content: space-between;
+    height: 140px;
+  }
+  #left-side {
+    margin-top: 20px;
+    height: 50px;
+  }
+  .header-right-side {
+    margin-top: 20px;
+    height: 50px;
+  }
+}

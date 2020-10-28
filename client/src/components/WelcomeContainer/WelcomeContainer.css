@@ -64,3 +64,34 @@
 }
 
 /* https://tobiasahlin.com/blog/layered-smooth-box-shadows/  */
+
+@media only screen and (max-width: 600px) {
+  .welcome-container {
+    flex-direction: column;
+    padding: 0;
+    width: 100vw;
+  }
+  #homepage-img {
+    width: 75vw;
+  }
+  .welcome-title {
+    font-size: 30px;
+    padding: 10px;
+  }
+  .welcome-subtitle {
+    font-size: 20px;
+    padding: 0 0 0 10px;
+  }
+  .welcome-p {
+    font-size: 18px;
+    padding: 0 0 0 10px;
+  }
+  #add-product {
+    width: 150px;
+    font-size: 15px;
+    margin: 0 0 0 10px;
+  }
+  .welcome-right-side {
+    display: none;
+  }
+}
