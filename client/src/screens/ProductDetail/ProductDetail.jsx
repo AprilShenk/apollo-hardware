@@ -94,7 +94,7 @@ const ProductDetail = () => {
             <span className="subtitle-info"><span className="detail-subtitle">Price: </span>${product.price}</span>
             <span className="subtitle-info"><span className="detail-subtitle">Qty:</span> {product.quantity}</span>
           </div>
-          <div>
+          <div className="button-div">
             <button className="edit-button">
               <Link className="edit-link" to={`/products/${product._id}/edit`}>
                 Edit Product

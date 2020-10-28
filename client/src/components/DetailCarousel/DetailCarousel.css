@@ -31,12 +31,19 @@
 .show-image {
   min-width: 100%;
   min-height: 100%;
-  /* height: 338px;
-  width: 338px; */
   margin: 0 auto;
   max-width: 100%;
-  /* height: auto; */
   max-width: 100%;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 600px) { 
+  .detail-carousel {
+    flex-direction: column;
+  }
+  .thumbnails {
+    flex-direction: row;
+    order: 1;
+    margin-top: 10px;
+  }
 }
