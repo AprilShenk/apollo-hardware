@@ -57,7 +57,16 @@ const Carousel = () => {
   ));
   
   if (!isLoaded) {
-    return <h1>Loading...</h1>;
+    return (
+      <>
+        <Breakpoint small down>
+          <div> </div>
+        </Breakpoint>
+        <Breakpoint large up>
+          <h1>Loading...</h1>
+        </Breakpoint>
+      </>
+    );
   }
 
   if (!display) {
