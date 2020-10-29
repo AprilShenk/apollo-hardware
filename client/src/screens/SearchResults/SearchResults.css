@@ -9,3 +9,21 @@
   color: #01192e;
   margin-left: 2rem;
 }
+
+@media only screen and (max-width: 600px) { 
+  .results-container {
+    flex-direction: column;
+    width: 100vw;
+    margin-bottom: 40px;
+  }
+  .result-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .search-title {
+    font-size: 2rem;
+  }
+  .product-div {
+    margin: 10px auto;
+  }
+}

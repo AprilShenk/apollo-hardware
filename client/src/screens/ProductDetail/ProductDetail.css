@@ -13,7 +13,7 @@
 .product-info-aside {
   margin-left: 40px;
   width: 50%;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -90,7 +90,6 @@
 
 .detail-subtitle{
   font-weight: bold;
-  /* font-size: 2.25em; */
 }
 
 .subtitle-info{
@@ -103,3 +102,28 @@
   width: 60%;
 }
 
+@media only screen and (max-width: 600px) { 
+  .product-detail {
+    width: 90vw;
+    justify-content: center;
+  }
+  .product-info-aside {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .subtitle-info {
+    font-size: x-large;
+  }
+  .button-div {
+    display: flex;
+    align-items: baseline;
+  }
+  .edit-button, .delete-button {
+    height: 29px;
+    font-size: 13px;
+    width: 50%;
+  }
+  .edit-link {
+    font-size: 13px;
+  }
+}
